@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Course } from '../model/course';
+import { Course } from '../../model/course';
 import { Observable } from 'rxjs';
-import { CoursesStore } from '../services/courses.store';
+import { CoursesStore } from '../../services/courses.store';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
-import { OptionsService } from '../services/options-service';
+import { OptionsService } from '../../services/options-service';
 
 @Component({
 	selector: 'home',

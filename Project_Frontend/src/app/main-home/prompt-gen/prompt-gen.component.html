@@ -1,1 +1,37 @@
-<p>prompt-gen works!</p>
+<div class="home-panel">
+	<mat-card>
+		<mat-card-content>
+			<ng-container *ngIf="filters.length != 0">
+				<form
+					class="prompt-gen"
+					[formGroup]="promptForm"
+					(ngInit)="formRegister()"
+				>
+					<mat-form-field appearance="fill" *ngFor="let filter of filters">
+						<mat-label [innerHTML]="filter.label"></mat-label>
+						<mat-select [formControl]="promptForm.controls[filter.controlName]">
+							<mat-option
+								*ngFor="let option of filter.option"
+								[value]="option.value"
+								>{{ option.label }}</mat-option
+							>
+						</mat-select>
+					</mat-form-field>
+				</form></ng-container
+			>
+			<div class="prompt-row prompt" [cdkCopyToClipboard]="narrativeData">
+				<div
+					[innerText]="narrativeData"
+					matTooltip="Click to copy the prompt"
+				></div>
+				<mat-icon
+					aria-hidden="false"
+					aria-label="click to copy prompt"
+					matTooltip="Click to copy the prompt"
+					fontIcon="file_copy"
+				></mat-icon>
+			</div>
+		</mat-card-content>
+	</mat-card>
+	<app-musicxml-player></app-musicxml-player>
+</div>

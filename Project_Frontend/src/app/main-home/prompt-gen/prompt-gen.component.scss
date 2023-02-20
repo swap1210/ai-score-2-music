@@ -1,0 +1,17 @@
+form.prompt-gen {
+	display: flex;
+	column-gap: 1em;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.home-panel {
+	margin: 0 auto;
+}
+.prompt {
+	cursor: grab;
+}
+.prompt-row {
+	display: flex;
+	justify-content: space-between;
+}

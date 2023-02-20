@@ -35,3 +35,8 @@
 .linkDarkLogo {
 	fill: mat.get-contrast-color-from-palette($profile-ang-dark-primary, 500);
 }
+
+.header-row {
+	height: 4em;
+	column-gap: 2em;
+}

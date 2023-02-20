@@ -17,6 +17,7 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
+  { path: 'home', loadChildren: () => import('./main-home/main-home.module').then(m => m.MainHomeModule) },
   {
     path: '**',
     redirectTo: '/'

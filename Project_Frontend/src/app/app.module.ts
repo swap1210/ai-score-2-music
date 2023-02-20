@@ -33,7 +33,6 @@ import { LoadingService } from './loading/loading.service';
 import { MessagesService } from './messages/messages.service';
 import { MySelectComponent } from './my-select/my-select.component';
 import { EditorComponent } from './editor/editor.component';
-import { PromptGeneratorComponent } from './main-home/prompt-generator/prompt-generator.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -44,7 +43,6 @@ import { PromptGeneratorComponent } from './main-home/prompt-generator/prompt-ge
 		LoadingComponent,
 		MySelectComponent,
 		EditorComponent,
-		PromptGeneratorComponent,
 	],
 	imports: [
 		BrowserModule,

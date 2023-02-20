@@ -1,1 +1,19 @@
-<p>header works!</p>
+<mat-toolbar [style]="{ height: '4em' }" color="primary"
+	><img class="header-app-icon" [src]="header.appIconLink" />
+	<div class="appNameDiv">
+		<span class="appName" [innerText]="header.appName"></span>
+		<span class="appDesc" [innerText]="header.appDesc"></span>
+	</div>
+	<span class="spacer"></span>
+	<button
+		mat-icon-button
+		(click)="switchTheme()"
+		aria-label="swtch theme between dark and light"
+	>
+		<mat-icon
+			[innerText]="
+				(commData.themeState$ | async).darkmode ? 'dark_mode' : 'brightness_5'
+			"
+		></mat-icon>
+	</button>
+</mat-toolbar>

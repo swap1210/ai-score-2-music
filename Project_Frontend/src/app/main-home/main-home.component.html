@@ -1,1 +1,17 @@
-<p>main-home works!</p>
+<div
+	class="parent"
+	[ngClass]="{
+		darkMode: (commData.themeState$ | async).darkmode,
+		darker: (commData.themeState$ | async).darkmode
+	}"
+>
+	<header class="section">
+		<home-header></home-header>
+	</header>
+	<div class="left-side section"></div>
+	<main class="section standard-Pad"><router-outlet></router-outlet></main>
+	<div class="right-side section"></div>
+	<footer class="section">
+		<home-footer></home-footer>
+	</footer>
+</div>

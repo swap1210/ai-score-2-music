@@ -1,10 +1,18 @@
-
 .login-page {
-  max-width: 350px;
-  margin: 50px auto 0 auto;
+	max-width: 20em;
+	min-width: 10em;
+	margin-top: 10em;
+	padding: 1em;
 }
 
 .login-form {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
+}
+.overall {
+	display: flex;
+	justify-content: center;
+}
+.title {
+	margin-bottom: 1.5em;
 }

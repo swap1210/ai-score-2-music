@@ -6,10 +6,6 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 	{
-		path: '',
-		component: HomeComponent,
-	},
-	{
 		path: 'editor',
 		component: EditorComponent,
 	},
@@ -24,7 +20,7 @@ const routes: Routes = [
 	},
 	{
 		path: '**',
-		redirectTo: '/',
+		redirectTo: '/home',
 	},
 ];
 

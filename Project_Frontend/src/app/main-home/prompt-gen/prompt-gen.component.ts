@@ -48,7 +48,7 @@ export class PromptGenComponent implements OnInit {
 
 	// Executed When Form Is Submitted
 	onFormChange() {
-		this.narrativeData = `Generate a musicXML with`;
+		this.narrativeData = `Generate a ABC format 2 minutes long score with`;
 		Object.keys(this.promptForm.getRawValue()).forEach((key: string) => {
 			if (this.promptForm.get(key).value) {
 				this.narrativeData +=

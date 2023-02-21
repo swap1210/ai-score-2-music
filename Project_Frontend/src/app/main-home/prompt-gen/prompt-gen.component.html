@@ -10,6 +10,7 @@
 					<mat-form-field appearance="fill" *ngFor="let filter of filters">
 						<mat-label [innerHTML]="filter.label"></mat-label>
 						<mat-select [formControl]="promptForm.controls[filter.controlName]">
+							<mat-option [value]="null">--none--</mat-option>
 							<mat-option
 								*ngFor="let option of filter.option"
 								[value]="option.value"

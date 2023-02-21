@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './main-home/home/home.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
@@ -18,6 +17,8 @@ import { RouterModule } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
 	declarations: [
@@ -33,10 +34,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 		BrowserAnimationsModule,
 		HttpClientModule,
 		ReactiveFormsModule,
+		RouterModule,
 		MatProgressSpinnerModule,
 		MatCardModule,
 		MatFormFieldModule,
-		RouterModule,
+		MatButtonModule,
+		MatInputModule,
 	],
 	providers: [LoadingService, MessagesService],
 	bootstrap: [AppComponent],

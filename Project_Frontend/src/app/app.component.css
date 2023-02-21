@@ -1,91 +1,87 @@
-
->>> body {
-    margin: 0;
+body {
+	margin: 0;
 }
 
 main {
-    margin: 30px;
+	margin: 30px;
 }
 
 .user-avatar {
-  max-height: 35px;
-  border-radius: 4px;
-
+	max-height: 35px;
+	border-radius: 4px;
 }
 
 .toolbar-tools {
-  display: flex;
-  width: 100%;
+	display: flex;
+	width: 100%;
 }
 
-
 .filler {
-  flex: 1 1 auto;
-  width: 100%;
+	flex: 1 1 auto;
+	width: 100%;
 }
 
 .app-container {
-  background-color: #f9f9f9;
-  font-family: 'Roboto', sans-serif;
+	background-color: #f9f9f9;
+	font-family: 'Roboto', sans-serif;
 }
 
 .side-nav {
-  background-color: #fff;
-  width: 200px;
+	background-color: #fff;
+	width: 200px;
 }
 
 .toolbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
 }
 
 .menu-button {
-  margin-right: 16px;
+	margin-right: 16px;
 }
 
 .notification-button {
-  margin-right: 16px;
+	margin-right: 16px;
 }
 
 .toolbar-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-right: 16px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 16px;
 }
 
 .filler {
-  flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 .main-content {
-  margin-top: 64px;
-  padding: 16px;
+	margin-top: 64px;
+	padding: 16px;
 }
 
 .side-nav {
-  width: 240px;
-  height: 100%;
-  background-color: #F2F2F2;
+	width: 240px;
+	height: 100%;
+	background-color: #f2f2f2;
 }
 
 .mat-nav-list {
-  padding: 0 16px;
+	padding: 0 16px;
 }
 
 .mat-list-item {
-  padding: 16px 0;
-  font-size: 18px;
-  color: #212121;
+	padding: 16px 0;
+	font-size: 18px;
+	color: #212121;
 }
 
 .mat-list-item:hover {
-  background-color: #E0E0E0;
+	background-color: #e0e0e0;
 }
 
 .mat-icon {
-  margin-right: 16px;
+	margin-right: 16px;
 }
-

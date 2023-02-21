@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatInputModule } from '@angular/material/input';
 
 let components = [
 	CommonModule,
@@ -23,6 +24,7 @@ let components = [
 	ReactiveFormsModule,
 	MatSelectModule,
 	MatTooltipModule,
+	MatInputModule,
 ];
 
 @NgModule({

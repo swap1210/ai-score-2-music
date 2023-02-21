@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingService } from './loading/loading.service';
+import { MessagesService } from './messages/messages.service';
 import { AuthStore } from './services/auth.store';
 @Component({
 	selector: 'app-root',
@@ -6,9 +8,16 @@ import { AuthStore } from './services/auth.store';
 	styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-	constructor(public auth: AuthStore) {}
+	constructor(
+		public auth: AuthStore,
+		private load: LoadingService,
+		private error: MessagesService
+	) {}
 
-	ngOnInit() {}
+	ngOnInit() {
+		// this.load.loadingOn();
+		// this.error.showErrors('fgdfgd');
+	}
 
 	logout() {
 		this.auth.logout();

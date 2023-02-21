@@ -1,7 +1,4 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Course } from '../../model/course';
-import { Observable } from 'rxjs';
-import { CoursesStore } from '../../services/courses.store';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { OptionsService } from '../../services/options-service';
 
@@ -19,11 +16,7 @@ export class HomeComponent implements OnInit {
 		forcePasteAsPlainText: true,
 	};
 	options: any;
-	constructor(
-		private coursesStore: CoursesStore,
-		private fb: FormBuilder,
-		private optionsService: OptionsService
-	) {
+	constructor(private fb: FormBuilder, private optionsService: OptionsService) {
 		this.regiForm = fb.group({
 			Dynamics: [null, Validators.required],
 			Tempo: [null, Validators.required],
@@ -36,8 +29,6 @@ export class HomeComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		// this.reloadCourses();
-
 		this.optionsService.getOptions().subscribe(
 			(data) => {
 				this.options = data;

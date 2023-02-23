@@ -1,11 +1,13 @@
 @use '@angular/material' as mat;
 
 html {
-	height: 100%;
+	height: 100vh;
+	height: 100dvh;
 }
 body {
 	margin: 0;
-	height: 100%;
+	height: 100vh;
+	height: 100dvh;
 	font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 

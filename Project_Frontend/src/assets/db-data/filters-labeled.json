@@ -238,15 +238,5 @@
 				"label": "Country"
 			}
 		]
-	},
-	{
-		"controlName": "specificMusicStyle",
-		"label": "Specific Music Style",
-		"option": [
-			{
-				"value": "Beatles",
-				"label": "Beatles"
-			}
-		]
 	}
 ]

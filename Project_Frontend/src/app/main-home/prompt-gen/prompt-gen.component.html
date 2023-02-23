@@ -18,9 +18,56 @@
 							>
 						</mat-select>
 					</mat-form-field>
+
+					<mat-form-field class="two-col" appearance="fill">
+						<mat-label>Add Instruments</mat-label>
+						<mat-chip-grid #chipGrid aria-label="Instruments selection">
+							<mat-chip-row
+								*ngFor="
+									let selectedInstrumentsObject of selectedInstrumentsData
+								"
+								(removed)="remove(selectedInstrumentsObject)"
+							>
+								{{ selectedInstrumentsObject.label }}
+								<button
+									matChipRemove
+									[attr.aria-label]="
+										'remove ' + selectedInstrumentsObject.label
+									"
+								>
+									<mat-icon>cancel</mat-icon>
+								</button>
+							</mat-chip-row>
+						</mat-chip-grid>
+						<input
+							placeholder="start typing..."
+							#instrumentCtrlId
+							name="instrumentCtrl"
+							[matChipInputFor]="chipGrid"
+							[matAutocomplete]="auto"
+							[matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+							(matChipInputTokenEnd)="add($event)"
+						/>
+						<mat-autocomplete
+							#auto="matAutocomplete"
+							name="instrumentAutocompleteCtrl"
+							(optionSelected)="selected($event)"
+						>
+							<mat-option
+								*ngFor="let instrumentsObject of filteredInstrumentsData"
+								[value]="instrumentsObject.label"
+							>
+								{{ instrumentsObject.label }}
+							</mat-option>
+						</mat-autocomplete>
+					</mat-form-field>
 				</form></ng-container
 			>
-			<div class="prompt-row prompt" [cdkCopyToClipboard]="narrativeData">
+			<div
+				class="prompt-row prompt"
+				*ngIf="narrativeData != ''"
+				[cdkCopyToClipboard]="narrativeData"
+			>
 				<div
 					[innerText]="narrativeData"
 					matTooltip="Click to copy the prompt"

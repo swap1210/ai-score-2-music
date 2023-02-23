@@ -1,11 +1,28 @@
-%Generate a ABC format 2 minutes long score with Tempo as Lento/Largo Time Signature as 4/4 Music Mode as Dorian General Music Style as Quartet
+%Generate a ABC format 2 minutes long score with Dynamics as mf Tempo as Lento/Largo Time Signature as 9/8 Key Signature as G Music Mode as Dorian
+%can you generate a longer music file
+%it can be 3 minutes long and add multiple instruments to it like guitar flute and style can be jazz
 X:1
-T:Dorian Quartet
-M:4/4
+T:Jazzy Tune
+M:C
 L:1/4
-Q:"Lento/Largo"
+Q:"Allegro"
 K:C
-G4 F4 | E4 D4 | C4 D4 | E4 F4 |
-G4 F4 | E4 D4 | C4 D4 | E4 F4 |
-G4 F4 | E4 D4 | C4 D4 | E4 F4 |
-G4 F4 | E4 D4 | C4 D4 | E4 F4 ||
+%%MIDI program 25 1 % guitar
+%%MIDI program 74 2 % flute
+[V:Guitar] % voice 1
+"C" G,4 | E,4 | "Fm7" A,2D2 | "G7" G,2B,2 | "C" c2e2 | "Am7" A,2D2 | "D7" D,2F,2 | "G7" G,2B,2 :|
+[V:Flute] % voice 2
+"C" G2E2 | "G7" D2B2 | "C" c2B2 | "Fm7" A2G2 | "Bb7" B,2A,2 | "A7" G2F2 | "D7" F2E2 | "G7" G2F2 :|
+[V:Guitar] % voice 1
+"C" c2e2 | "Am7" A,2D2 | "D7" D,2F,2 | "G7" G,2B,2 | "C" c2e2 | "Am7" A,2D2 | "D7" D,2F,2 | "G7" G,2B,2 :|
+[V:Flute] % voice 2
+"C" G2E2 | "G7" D2B2 | "C" c2B2 | "Fm7" A2G2 | "Bb7" B,2A,2 | "A7" G2F2 | "D7" F2E2 | "G7" G2F2 :|
+[V:Guitar] % voice 1
+"C" G,4 | E,4 | "Fm7" A,2D2 | "G7" G,2B,2 | "C" c2e2 | "Am7" A,2D2 | "D7" D,2F,2 | "G7" G,2B,2 :|
+[V:Flute] % voice 2
+"C" G2E2 | "G7" D2B2 | "C" c2B2 | "Fm7" A2G2 | "Bb7" B,2A,2 | "A7" G2F2 | "D7" F2E2 | "G7" G2F2 :|
+[V:Guitar] % voice 1
+"C" c2e2 | "Am7" A,2D2 | "D7" D,2F,2 | "G7" G,2B,2 | "C" c2e2 | "Am7" A,2D2 | "D7" D,2F,2 | "G7" G,2B,2 :|
+[V:Flute] % voice 2
+"C" G2E2 | "G7" D2B2 | "C" c2B2 | "Fm7" A2G2 | "Bb7" B,2A,2 | "A7" G2F2 | "D7" F2E2 | "G7" G2F2 :|
+[V:Guitar] % voice 1

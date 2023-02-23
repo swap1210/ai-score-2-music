@@ -40,3 +40,14 @@
 	height: 4em;
 	column-gap: 2em;
 }
+
+.no-mob {
+	@media only screen and (max-width: $mobile-width) {
+		display: none;
+	}
+}
+.mob {
+	@media only screen and (min-width: $mobile-width) {
+		display: none;
+	}
+}

@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorComponent } from './middle/error/error.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonDataService } from 'src/service/common-data.service';
+import { HttpClientModule } from '@angular/common/http';
+import { UsedMaterialModule } from './used-material/used-material.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +20,12 @@ import { ErrorComponent } from './middle/error/error.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    UsedMaterialModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CommonDataService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

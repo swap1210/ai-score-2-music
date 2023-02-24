@@ -1,0 +1,33 @@
+@use "@angular/material" as mat;
+@import "./vars.scss";
+
+$profile-app: mat.define-light-theme(
+  (
+    color: (
+      primary: $profile-ang-primary,
+      accent: $profile-ang-accent,
+      warn: $profile-ang-warn,
+    ),
+  )
+);
+
+$profile-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $profile-ang-dark-primary,
+      accent: $profile-ang-dark-accent,
+      warn: $profile-ang-dark-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($profile-app);
+.darkMode {
+  @include mat.all-component-colors($profile-dark-theme);
+  // color: red;
+}
+// @include mat.button-theme($profile-app);
+// @include mat.toolbar-theme($profile-app);
+// @include mat.table-theme($profile-app);
+// @include mat.slide-toggle-theme($profile-app);
+// @include mat.datepicker-theme($profile-app);

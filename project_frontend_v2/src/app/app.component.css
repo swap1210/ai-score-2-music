@@ -1,0 +1,8 @@
+.parent {
+	height: 100vh;
+	height: 100dvh;
+	background-color: #e5e5e5;
+}
+.darker {
+	background-color: rgb(87, 94, 132);
+}

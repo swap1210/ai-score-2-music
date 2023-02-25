@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonDataService } from 'src/service/common-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UsedMaterialModule } from './used-material/used-material.module';
+import { HomeComponent } from './middle/home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UsedMaterialModule } from './used-material/used-material.module';
     HeaderComponent,
     FooterComponent,
     ErrorComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

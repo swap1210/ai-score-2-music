@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EditorComponent } from '../editor/editor.component';
+import { EditorComponent } from './home/editor/editor.component';
 import { HomeComponent } from './home/home.component';
 import { MainHomeComponent } from './main-home.component';
 import { PromptGenComponent } from './prompt-gen/prompt-gen.component';

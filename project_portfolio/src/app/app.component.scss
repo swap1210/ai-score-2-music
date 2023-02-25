@@ -1,0 +1,37 @@
+.parent {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  height: 100%;
+  background-color: #e5e5e5;
+}
+.darker {
+  background-color: rgb(87, 94, 132);
+}
+header {
+  padding: 2rem;
+  grid-column: 1 / 4;
+}
+
+.left-side {
+  grid-column: 1 / 2;
+  color: #e5e5e5;
+}
+
+main {
+  grid-column: 2 / 3;
+}
+
+.right-side {
+  grid-column: 3 / 4;
+  color: #e5e5e5;
+}
+
+footer {
+  grid-column: 1 / 4;
+}
+.section {
+  padding: 0rem;
+}
+.standard-Pad {
+  padding: 2em 1em;
+}

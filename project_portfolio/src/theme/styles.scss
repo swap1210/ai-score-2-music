@@ -1,6 +1,5 @@
 @use "@angular/material" as mat;
-@import "~font-awesome/css/font-awesome.min.css";
-@import "https://www.abcjs.net/abcjs-audio.css";
+@import "./vars.scss";
 
 html {
   height: 100vh;
@@ -114,15 +113,4 @@ $theme: mat.define-light-theme(
 
 .clickable {
   cursor: pointer;
-}
-
-.only-mobile {
-	@media only screen and (max-width: $mobile-width) {
-		display: none;
-	}
-}
-.only-pc {
-	@media only screen and (min-width: $mobile-width) {
-		display: none;
-	}
 }

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { CommonDataService } from 'src/service/common-data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'project_portfolio';
+  constructor(public commData: CommonDataService) {}
 }

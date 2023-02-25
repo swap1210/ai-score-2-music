@@ -1,0 +1,65 @@
+<mat-toolbar class="header-row" color="primary">
+  <img class="header-app-icon" src="./assets/logo.png" />
+  <button
+    mat-button
+    tabindex="0"
+    class=""
+    [routerLink]="'/'"
+    routerLinkActive="active"
+  >
+    <span class="appName" [innerText]="header.appName"></span>
+  </button>
+  <span class="spacer"></span>
+  <button
+    mat-button
+    class="only-pc"
+    [routerLink]="'/Menu1'"
+    routerLinkActive="active"
+  >
+    Menu1
+  </button>
+  <button
+    mat-button
+    class="only-pc"
+    [routerLink]="'/Menu2'"
+    routerLinkActive="active"
+  >
+    Menu2
+  </button>
+  <button
+    mat-icon-button
+    (click)="switchTheme()"
+    aria-label="swtch theme between dark and light"
+    class="only-pc"
+  >
+    <mat-icon
+      [innerText]="
+        (commData.themeState$ | async)!.darkmode ? 'dark_mode' : 'brightness_5'
+      "
+    ></mat-icon>
+  </button>
+  <button class="only-mobile" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="'/Menu1'" routerLinkActive="active">
+      Menu1
+    </button>
+    <button mat-menu-item [routerLink]="'/Menu2'" routerLinkActive="active">
+      Menu2
+    </button>
+    <button
+      mat-icon-button
+      (click)="switchTheme()"
+      aria-label="swtch theme between dark and light"
+    >
+      <mat-icon
+        [innerText]="
+          (commData.themeState$ | async)!.darkmode
+            ? 'dark_mode'
+            : 'brightness_5'
+        "
+      ></mat-icon>
+    </button>
+  </mat-menu>
+</mat-toolbar>

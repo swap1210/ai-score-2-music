@@ -12,7 +12,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { LoadingComponent } from './loading/loading.component';
 import { LoadingService } from './loading/loading.service';
 import { MessagesService } from './messages/messages.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
@@ -30,6 +30,7 @@ import { MatInputModule } from '@angular/material/input';
 	],
 	imports: [
 		AppRoutingModule,
+		FormsModule,
 		BrowserModule,
 		BrowserAnimationsModule,
 		HttpClientModule,

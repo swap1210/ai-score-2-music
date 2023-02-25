@@ -95,7 +95,11 @@ export class PromptGenComponent implements OnInit {
 			}
 		});
 		if (count) {
-			// this.narrativeData += ' in guitar';
+			if (this.selectedInstrumentsData.length) {
+				this.narrativeData +=
+					' add instruments like ' +
+					this.selectedInstrumentsData.map<string>((inst) => inst.label);
+			}
 		} else {
 			this.narrativeData = '';
 		}
@@ -112,7 +116,7 @@ export class PromptGenComponent implements OnInit {
 		// Clear the input value
 		event.chipInput!.clear();
 
-		this.promptForm.get(['instrumentCtrl']).setValue(null);
+		// this.promptForm.get(['instrumentCtrl']).setValue(null);
 	}
 
 	remove(instrument: OptionModel): void {

@@ -1,0 +1,24 @@
+.editor-panel {
+  display: flex;
+  flex-direction: row;
+}
+
+.editor-card {
+  flex: 1;
+  margin: 16px;
+}
+
+.editor-content {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  height: 100%;
+}
+
+.download-button-container {
+  margin-top: 10px;
+}

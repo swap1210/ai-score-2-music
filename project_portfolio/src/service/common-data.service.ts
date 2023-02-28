@@ -14,6 +14,12 @@ export class CommonDataService {
     darkmode: false,
   });
 
+  getRaw(): Observable<any> {
+    return this.http.get(
+      'assets/db-data/common-val.json'
+    ) as Observable<CommDataModel>;
+  }
+
   getHeader(): Observable<CommDataModel> {
     return this.http.get(
       'assets/db-data/common-val.json'

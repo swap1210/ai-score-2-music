@@ -1,7 +1,12 @@
 {
   "header": {
-    "appName": "Taalmaster",
+    "appName": "Taalmasteer",
     "appDesc": "",
     "appIconLink": " "
+  },
+  "mentor":{
+    "imgSrc":"",
+    "heading":"Botichr",
+    "desc":"this is desc"
   }
 }

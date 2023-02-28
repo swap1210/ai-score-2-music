@@ -16,15 +16,31 @@
     [routerLink]="'/Menu1'"
     routerLinkActive="active"
   >
-    Menu1
+    Home
   </button>
   <button
     mat-button
     class="only-pc"
-    [routerLink]="'/Menu2'"
+    [routerLink]="'/mentor'"
     routerLinkActive="active"
   >
-    Menu2
+    Mentors
+  </button>
+  <button
+    mat-button
+    class="only-pc"
+    [routerLink]="'/team'"
+    routerLinkActive="active"
+  >
+    Team
+  </button>
+  <button
+    mat-button
+    class="only-pc"
+    [routerLink]="'/Menu4'"
+    routerLinkActive="active"
+  >
+    Milestones
   </button>
   <button
     mat-icon-button
@@ -47,6 +63,12 @@
     </button>
     <button mat-menu-item [routerLink]="'/Menu2'" routerLinkActive="active">
       Menu2
+    </button>
+    <button mat-menu-item [routerLink]="'/Menu3'" routerLinkActive="active">
+      Menu3
+    </button>
+    <button mat-menu-item [routerLink]="'/Menu4'" routerLinkActive="active">
+      Menu4
     </button>
     <button
       mat-icon-button

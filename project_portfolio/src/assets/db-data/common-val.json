@@ -1,12 +1,13 @@
 {
   "header": {
-    "appName": "Taalmasteer",
+    "appName": "Taalmaster",
     "appDesc": "",
     "appIconLink": " "
   },
+
   "mentor":{
-    "imgSrc":"",
-    "heading":"Botichr",
-    "desc":"this is desc"
+    "imgSrc":"https://sceweb.uhcl.edu/boetticher/images/bar_bottom.gif",
+    "heading":"Gary D.Boetticher, Ph.D.",
+    "desc":"Dr. Boetticher is an Associate Professor in Computer Science. His research areas include Financial Data Mining, Data Mining and Machine Learning. "
   }
 }

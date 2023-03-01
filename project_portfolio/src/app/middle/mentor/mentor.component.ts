@@ -11,7 +11,7 @@ import { Mentor } from 'src/service/model/mentor';
 export class MentorComponent implements OnInit {
 dat:Mentor={
   imgSrc: '',
-  heading: '',
+  heading: 'Gary D.Boetticher, Ph.D.',
   desc: ''
 };
   constructor(public comService: CommonDataService) { }

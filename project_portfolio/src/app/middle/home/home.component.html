@@ -2,9 +2,7 @@
   <img src="assets/logo.png" class="home-image" />
   <p
     class="para mat-body mat-elevation-z4"
-    ngClass="{{
-      (commData.themeState$ | async)?.darkmode ? 'para-darker' : ''
-    }}"
+    [ngClass]="{ 'para-darker': (commData.themeState$ | async)?.darkmode }"
   >
     Introducing an innovative AI-powered music generation app
     <b>Taalmaster</b>, that utilizes ChatGPT, a state-of-the-art language model,

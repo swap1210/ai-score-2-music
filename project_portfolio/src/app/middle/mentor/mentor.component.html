@@ -1,9 +1,7 @@
 <div class="mentor-main">
   <img [src]="(comService.mentor$ | async)?.imgSrc" class="mentor-image" />
-
-  <h2
-    [innerText]="(comService.mentor$ | async)?.heading"
-    class="mentor-head"
-  ></h2>
-  <!-- <p [innerText]="dat.desc" class="mentor-desc"></p> -->
+  <div class="content">
+    <h2 [innerText]="(comService.mentor$ | async)?.heading"></h2>
+    <p [innerHTML]="(comService.mentor$ | async)?.desc"></p>
+  </div>
 </div>

@@ -1,31 +1,18 @@
 <mat-toolbar class="header-row" color="primary">
   <img class="header-app-icon" src="./assets/logo.png" />
-  <button
-    mat-button
-    tabindex="0"
-    class=""
-    [routerLink]="'/'"
-    routerLinkActive="active"
-  >
+  <button mat-button tabindex="0" class="" [routerLink]="'/'">
     <span
       class="appName"
       [innerText]="(commData.header$ | async)?.appName"
     ></span>
   </button>
   <span class="spacer"></span>
-  <button
-    mat-button
-    class="only-pc"
-    [routerLink]="'/'"
-    routerLinkActive="active"
-  >
-    Home
-  </button>
+  <button mat-button class="only-pc" [routerLink]="'/'">Home</button>
   <button
     mat-button
     class="only-pc"
     [routerLink]="'/mentor'"
-    routerLinkActive="active"
+    routerLinkActive="active-tab-look"
   >
     Mentors
   </button>
@@ -33,7 +20,7 @@
     mat-button
     class="only-pc"
     [routerLink]="'/team'"
-    routerLinkActive="active"
+    routerLinkActive="active-tab-look"
   >
     Team
   </button>
@@ -41,7 +28,7 @@
     mat-button
     class="only-pc"
     [routerLink]="'/milestones'"
-    routerLinkActive="active"
+    routerLinkActive="active-tab-look"
   >
     Milestones
   </button>
@@ -61,22 +48,43 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="'/Menu1'" routerLinkActive="active">
-      Menu1
+    <button
+      mat-button
+      class="only-pc"
+      [routerLink]="'/'"
+      routerLinkActive="active-tab-look"
+    >
+      Home
     </button>
-    <button mat-menu-item [routerLink]="'/Menu2'" routerLinkActive="active">
-      Menu2
+    <button
+      mat-button
+      class="only-pc"
+      [routerLink]="'/mentor'"
+      routerLinkActive="active-tab-look"
+    >
+      Mentors
     </button>
-    <button mat-menu-item [routerLink]="'/Menu3'" routerLinkActive="active">
-      Menu3
+    <button
+      mat-button
+      class="only-pc"
+      [routerLink]="'/team'"
+      routerLinkActive="active-tab-look"
+    >
+      Team
     </button>
-    <button mat-menu-item [routerLink]="'/Menu4'" routerLinkActive="active">
-      Menu4
+    <button
+      mat-button
+      class="only-pc"
+      [routerLink]="'/milestones'"
+      routerLinkActive="active-tab-look"
+    >
+      Milestones
     </button>
     <button
       mat-icon-button
       (click)="switchTheme()"
       aria-label="swtch theme between dark and light"
+      class="only-pc"
     >
       <mat-icon
         [innerText]="

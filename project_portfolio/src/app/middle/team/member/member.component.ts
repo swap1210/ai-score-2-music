@@ -8,6 +8,7 @@ import { TeamMember } from 'src/service/model/comm.data.model';
   styleUrls: ['./member.component.scss'],
 })
 export class MemberComponent implements OnInit {
+  public hovered: boolean = false;
   @Input()
   member!: TeamMember;
   constructor(public commData: CommonDataService) {}

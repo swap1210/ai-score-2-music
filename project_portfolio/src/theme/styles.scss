@@ -92,9 +92,10 @@ $theme: mat.define-light-theme(
 
 html,
 body {
+  max-height: 100dvh;
+  // position: relative;
   min-height: 100dvh;
-  height: 100dvh;
-  margin: 0;
+  margin: 0px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 

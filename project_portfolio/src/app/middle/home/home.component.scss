@@ -7,7 +7,7 @@
 
 .home-image {
   position: absolute;
-  max-height: 70dvh;
+  max-height: 30em;
   opacity: 60%;
   filter: blur(0.4em);
   -webkit-filter: blur(0.4em);
@@ -18,9 +18,9 @@
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 0.5em;
   padding: 3em 1.5em;
-  max-width: 60em;
   font-size: large;
   line-height: 1.5em;
+  text-align: justify;
 }
 
 .para-darker {

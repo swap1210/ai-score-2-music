@@ -29,6 +29,7 @@ export interface TeamMember {
   bio: string;
   linkedin: string;
   github: string;
+  email: string;
 }
 export interface Milestone {
   position: number;

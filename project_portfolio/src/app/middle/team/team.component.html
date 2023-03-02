@@ -1,2 +1,7 @@
-<h1>Meet the team</h1>
-{{ content | json }}
+<p class="mat-h1">Meet the team</p>
+<div class="emulated-flex-gap">
+  <app-member
+    *ngFor="let mem of commData.teamMembers$ | async"
+    [member]="mem"
+  ></app-member>
+</div>

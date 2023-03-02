@@ -1,0 +1,26 @@
+/* my-component.scss */
+@use "@angular/material" as mat;
+@import "../../../../theme/vars.scss";
+
+.linkLogo {
+  fill: mat.get-contrast-color-from-palette($profile-ang-primary, 500);
+}
+.linkDarkLogo {
+  fill: mat.get-contrast-color-from-palette($profile-ang-dark-primary, 500);
+}
+.member-card {
+  max-width: 20em;
+}
+
+.profile-img {
+  border-radius: 10em;
+}
+.mat-card-actions {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 1em;
+  row-gap: 2em;
+}
+p {
+  text-align: justify;
+}

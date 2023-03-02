@@ -7,13 +7,16 @@
     [routerLink]="'/'"
     routerLinkActive="active"
   >
-    <span class="appName" [innerText]="header.appName"></span>
+    <span
+      class="appName"
+      [innerText]="(commData.header$ | async)?.appName"
+    ></span>
   </button>
   <span class="spacer"></span>
   <button
     mat-button
     class="only-pc"
-    [routerLink]="'/Menu1'"
+    [routerLink]="'/'"
     routerLinkActive="active"
   >
     Home
@@ -37,7 +40,7 @@
   <button
     mat-button
     class="only-pc"
-    [routerLink]="'/Menu4'"
+    [routerLink]="'/milestones'"
     routerLinkActive="active"
   >
     Milestones

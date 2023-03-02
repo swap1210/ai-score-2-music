@@ -5,6 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 const componentList = [
   CommonModule,
@@ -13,6 +15,8 @@ const componentList = [
   MatIconModule,
   MatMenuModule,
   HttpClientModule,
+  MatCardModule,
+  MatTableModule,
 ];
 
 @NgModule({

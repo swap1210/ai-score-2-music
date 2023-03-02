@@ -1,0 +1,11 @@
+.emulated-flex-gap > * {
+  margin: 1.5em 0 0 1.5em;
+}
+
+.emulated-flex-gap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: -1.5em 0 0 -1.5em;
+  width: calc(100% + 1.5em);
+  justify-content: center;
+}

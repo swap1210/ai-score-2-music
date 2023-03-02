@@ -5,9 +5,64 @@
     "appIconLink": " "
   },
 
-  "mentor":{
-    "imgSrc":"https://sceweb.uhcl.edu/boetticher/images/bar_bottom.gif",
-    "heading":"Gary D.Boetticher, Ph.D.",
-    "desc":"Dr. Boetticher is an Associate Professor in Computer Science. His research areas include Financial Data Mining, Data Mining and Machine Learning. "
-  }
+  "mentor": {
+    "imgSrc": "https://www.uhcl.edu/science-engineering/faculty/images/boetticher-gary.jpg",
+    "heading": "Gary D.Boetticher, Ph.D.",
+    "desc": "Dr. Boetticher is an Associate Professor in Computer Science. His research areas include Financial Data Mining, Data Mining and Machine Learning. "
+  },
+  "teamMembers": [
+    {
+      "imgSrc": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "title": "",
+      "bio": "",
+      "linkedin": "",
+      "github": ""
+    },
+    {
+      "imgSrc": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "title": "",
+      "bio": "",
+      "linkedin": "",
+      "github": ""
+    },
+    {
+      "imgSrc": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "title": "",
+      "bio": "",
+      "linkedin": "",
+      "github": ""
+    },
+    {
+      "imgSrc": "https://avatars.githubusercontent.com/u/16183749?v=4",
+      "title": "Swapnil Patel",
+      "bio": "As a passionate and detail-oriented individual, I take pride in producing clean, efficient, and maintainable code.",
+      "linkedin": "https://www.linkedin.com/in/swap1210/",
+      "github": "https://github.com/swap1210"
+    }
+  ],
+  "footer": {
+    "section1": "",
+    "section2": "© Taalmaster 2023. All rights reserved.",
+    "section3": "Developed by Bhavitha, Nidhi, Teja & Swapnil"
+  },
+  "milestones": [
+    {
+      "position": 1,
+      "dueDate": "",
+      "deliverable": "",
+      "status": ""
+    },
+    {
+      "position": 2,
+      "dueDate": "",
+      "deliverable": "",
+      "status": ""
+    },
+    {
+      "position": 3,
+      "dueDate": "",
+      "deliverable": "",
+      "status": ""
+    }
+  ]
 }

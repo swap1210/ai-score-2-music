@@ -1,1 +1,5 @@
-<p>footer works!</p>
+<div class="parent">
+  <p [innerText]="(commData.footer$ | async)?.section1"></p>
+  <p [innerText]="(commData.footer$ | async)?.section2"></p>
+  <p [innerText]="(commData.footer$ | async)?.section3"></p>
+</div>

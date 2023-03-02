@@ -1,17 +1,6 @@
 @use "@angular/material" as mat;
 @import "./vars.scss";
 
-html {
-  height: 100vh;
-  height: 100dvh;
-}
-body {
-  margin: 0;
-  height: 100vh;
-  height: 100dvh;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
 @include mat.core();
 
 $dark-primary-text: rgba(black, 0.87);
@@ -100,6 +89,14 @@ $theme: mat.define-light-theme(
 );
 
 @include mat.all-component-themes($theme);
+
+html,
+body {
+  min-height: 100dvh;
+  height: 100dvh;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .mat-elevation-z7 {
   box-shadow: 0 4px 5px -2px #0003, 0 7px 10px 1px #00000024,

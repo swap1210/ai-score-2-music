@@ -1,8 +1,28 @@
-.home-main{
-display: flex;
-column-gap: 2em;
+.home-main {
+  position: relative;
+  display: flex;
+  column-gap: 2em;
+  margin: 1dvw/2 0;
 }
 
-.home-image{
-    height: 30em;
+.home-image {
+  position: absolute;
+  max-height: 70dvh;
+  opacity: 60%;
+  filter: blur(0.4em);
+  -webkit-filter: blur(0.4em);
+}
+.para {
+  margin-left: 1dvw;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 0.5em;
+  padding: 3em 1.5em;
+  max-width: 60em;
+  font-size: large;
+  line-height: 1.5em;
+}
+
+.para-darker {
+  background-color: rgba(0, 0, 0, 0.4);
 }

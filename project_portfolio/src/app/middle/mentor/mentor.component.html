@@ -1,9 +1,9 @@
 <div class="mentor-main">
-  <img
-    src="https://www.uhcl.edu/science-engineering/faculty/images/boetticher-gary.jpg"
-    class="mentor-image"
-  />
+  <img [src]="(comService.mentor$ | async)?.imgSrc" class="mentor-image" />
 
-  <h2 [innerText]="dat.heading" class="mentor-head"></h2>
+  <h2
+    [innerText]="(comService.mentor$ | async)?.heading"
+    class="mentor-head"
+  ></h2>
   <!-- <p [innerText]="dat.desc" class="mentor-desc"></p> -->
 </div>

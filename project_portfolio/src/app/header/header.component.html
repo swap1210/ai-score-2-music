@@ -48,43 +48,34 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button
-      mat-button
-      class="only-pc"
-      [routerLink]="'/'"
-      routerLinkActive="active-tab-look"
-    >
+    <button mat-menu-item [routerLink]="'/'" routerLinkActive="active-tab-look">
       Home
     </button>
     <button
-      mat-button
-      class="only-pc"
+      mat-menu-item
       [routerLink]="'/mentor'"
       routerLinkActive="active-tab-look"
     >
       Mentors
     </button>
     <button
-      mat-button
-      class="only-pc"
+      mat-menu-item
       [routerLink]="'/team'"
       routerLinkActive="active-tab-look"
     >
       Team
     </button>
     <button
-      mat-button
-      class="only-pc"
+      mat-menu-item
       [routerLink]="'/milestones'"
       routerLinkActive="active-tab-look"
     >
       Milestones
     </button>
     <button
-      mat-icon-button
+      mat-menu-item
       (click)="switchTheme()"
       aria-label="swtch theme between dark and light"
-      class="only-pc"
     >
       <mat-icon
         [innerText]="

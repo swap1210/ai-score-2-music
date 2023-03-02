@@ -1,7 +1,8 @@
 .parent {
   display: grid;
   grid-template: auto 1fr auto / auto 1fr auto;
-  height: 100dvh;
+  height: 100%;
+  min-height: 100dvh;
   background-color: #e5e5e5;
 }
 .darker {

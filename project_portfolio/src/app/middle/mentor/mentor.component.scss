@@ -1,16 +1,20 @@
 .mentor-main {
   display: flex;
   column-gap: 2em;
+  row-gap: 2em;
   padding: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .mentor-image {
-  height: 25em;
+  max-height: 17em;
   border-radius: 50%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  max-width: 80em;
 }
 
 p {

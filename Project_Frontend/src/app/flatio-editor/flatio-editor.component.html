@@ -1,0 +1,12 @@
+<div class="flatio-editor-panel">
+  <mat-card class="editor-card">
+    <mat-card-content>
+      <input #myInput type="file" (change)="onFileSelected($event)" />
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="editor-card" [hidden]="!scoreLoaded">
+    <mat-card-content>
+      <div id="embed-container"></div>
+    </mat-card-content>
+  </mat-card>
+</div>

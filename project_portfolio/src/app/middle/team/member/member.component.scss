@@ -10,10 +10,13 @@
 }
 .member-card {
   max-width: 20em;
+  // min-height: 44em;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-img {
-  max-width: 20em;
+  max-width: 15em;
   height: auto;
   margin: auto;
   border-radius: 50% 50%;
@@ -28,6 +31,7 @@
 p {
   text-align: justify;
 }
+
 .mat-h2 {
   display: inline-block;
   text-decoration: underline;
@@ -38,4 +42,12 @@ p {
 }
 .highlighted-dark {
   background-color: mat.get-color-from-palette($profile-ang-dark-primary, 100);
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 14em;
 }

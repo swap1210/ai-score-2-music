@@ -12,29 +12,31 @@
   },
   "teamMembers": [
     {
-      "imgSrc": "https://media.licdn.com/dms/image/D5603AQFDvRwjrLNF_g/profile-displayphoto-shrink_800_800/0/1674527070481?e=1683763200&v=beta&t=DWFS60U_xOUeWdyEveDUhvy4_rEqvx_jpk_FGvehibk",
+      "imgSrc": "./assets/Bhavitha_Web.jpg",
       "title": "Bhavitha Potlapally",
-      "bio": "",
+      "bio": "I am an extremely analytical,process-oriented,and responsible software engineer with a extensive knowledge of programming languages and problem-solving techniques. I am enthusiastic about leveraging my skills by solving and participating in various projects.",
       "linkedin": "https://www.linkedin.com/in/bhavitha-potlapally/",
       "github": "https://github.com/bhavitharao",
       "email":  "bhavithapotlapally.13@gmail.com"
     },
     {
-      "imgSrc": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "imgSrc": "./assets/Nidhi_Web.jpg",
       "title": "Nidhi Gol",
-      "bio": "",
+      "bio": "I bring expertise in both front-end and back-end technologies to deliver high quality web applications. I am a passoniate Full Stack Developer. With a focus on user experience and performance, I am dedicated to creating seamless digital experiences that engage and delight users. ",
       "linkedin": "",
-      "github": "https://github.com/golnidhi"
+      "github": "https://github.com/golnidhi",
+      "email": "kinu.gol138@gmail.com"
     },
     {
-      "imgSrc": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "imgSrc": "./assets/Ratna_Web.jpg",
       "title": "Ratna Teja Nerusu",
       "bio": "",
       "linkedin": "https://www.linkedin.com/in/ratna-teja-nerusu/",
-      "github": "https://github.com/RatnaTejaN"
+      "github": "https://github.com/RatnaTejaN",
+      "email": ""
     },
     {
-      "imgSrc": "https://avatars.githubusercontent.com/u/16183749?v=4",
+      "imgSrc": "./assets/Swapnil_Web.jpg",
       "title": "Swapnil Patel",
       "bio": "As a passionate and detail-oriented individual, I take pride in producing clean, efficient, and maintainable code. Ping me if you have an awesome project idea and you need help executing it.",
       "linkedin": "https://www.linkedin.com/in/swap1210/",

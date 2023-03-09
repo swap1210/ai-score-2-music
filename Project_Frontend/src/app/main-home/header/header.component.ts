@@ -13,11 +13,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	header: Header;
 	constructor(public commData: CommonDataService) {}
 	ngOnInit(): void {
-		this.commData.getHeader().subscribe({
-			next: (val) => {
-				this.header = val.header;
-			},
-		});
+		this.header = this.commData.getHeader().header;
 	}
 
 	//prefer active unsubscribing from all the hotpatch data from firebase

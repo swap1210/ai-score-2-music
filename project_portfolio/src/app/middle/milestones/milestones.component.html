@@ -29,7 +29,20 @@
     <!-- Symbol Column -->
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef>Status</th>
-      <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+      <td
+        mat-cell
+        *matCellDef="let element"
+        class="bolder"
+        [ngStyle]="{
+          color: element.status.toLowerCase().includes('complete')
+            ? 'green'
+            : element.status.toLowerCase().includes('pending')
+            ? 'orange'
+            : 'red'
+        }"
+      >
+        {{ element.status }}
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

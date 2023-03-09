@@ -85,7 +85,7 @@ export const COMMVAL = {
       position: 6,
       dueDate: '03/22/2023',
       deliverable: 'Mid Presentation',
-      status: 'Upcoming',
+      status: 'Pending',
     },
     {
       position: 7,

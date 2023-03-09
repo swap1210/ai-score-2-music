@@ -26,3 +26,13 @@
 .para-darker {
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+.block {
+  width: 70dvw;
+  margin: 3em 1em;
+}
+.real-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

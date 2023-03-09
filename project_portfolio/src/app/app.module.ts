@@ -12,6 +12,7 @@ import { CommonDataService } from 'src/service/common-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UsedMaterialModule } from './used-material/used-material.module';
 import { HeaderComponent } from './header/header.component';
+import { ErrorComponent } from './middle/error/error.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent,
     FooterComponent,
     RoutingComponents,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

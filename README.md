@@ -20,3 +20,9 @@ To run the page locally run serve command
 ```
 > ng serve
 ```
+
+To deploy the page run build command like this
+
+```
+ng build --base-href /caps23g2/
+```

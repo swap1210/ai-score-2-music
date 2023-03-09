@@ -12,15 +12,15 @@
   },
   "teamMembers": [
     {
-      "imgSrc": "./assets/Bhavitha_Web.png",
+      "imgSrc": "./assets/Bhavitha_Web.jpg",
       "title": "Bhavitha Potlapally",
       "bio": "I am an extremely analytical,process-oriented,and responsible software engineer with a extensive knowledge of programming languages and problem-solving techniques. I am enthusiastic about leveraging my skills by solving and participating in various projects.",
       "linkedin": "https://www.linkedin.com/in/bhavitha-potlapally/",
       "github": "https://github.com/bhavitharao",
-      "email": "bhavithapotlapally.13@gmail.com"
+      "email":  "bhavithapotlapally.13@gmail.com"
     },
     {
-      "imgSrc": "./assets/Nidhi_Web.png",
+      "imgSrc": "./assets/Nidhi_Web.jpg",
       "title": "Nidhi Gol",
       "bio": "I bring expertise in both front-end and back-end technologies to deliver high quality web applications. I am a passoniate Full Stack Developer. With a focus on user experience and performance, I am dedicated to creating seamless digital experiences that engage and delight users. ",
       "linkedin": "https://www.linkedin.com/in/nidhi-gol-ba036564/",
@@ -28,7 +28,7 @@
       "email": "kinu.gol138@gmail.com"
     },
     {
-      "imgSrc": "./assets/Ratna_Web.png",
+      "imgSrc": "./assets/Ratna_Web.jpg",
       "title": "Ratna Teja Nerusu",
       "bio": "Driven Data Science graduate student with strong analytical skills in Python, R, and Machine Learning, seeks to solve complex problems with data.",
       "linkedin": "https://www.linkedin.com/in/ratna-teja-nerusu-013143177/",
@@ -36,7 +36,7 @@
       "email": "ratnatejanerusu21@gmail.com"
     },
     {
-      "imgSrc": "./assets/Swapnil_Web.png",
+      "imgSrc": "./assets/Swapnil_Web.jpg",
       "title": "Swapnil Patel",
       "bio": "As a passionate and detail-oriented individual, I take pride in producing clean, efficient, and maintainable code. Ping me if you have an awesome project idea and you need help executing it.",
       "linkedin": "https://www.linkedin.com/in/swap1210/",
@@ -52,18 +52,42 @@
   "milestones": [
     {
       "position": 1,
+      "dueDate": "02/01/2023",
+      "deliverable": "Brainstormed basic blueprint",
+      "status": "Completed"
+    },
+    {
+      "position": 2,
+      "dueDate": "02/15/2023",
+      "deliverable": "Music Theory",
+      "status": "Completed"
+    },
+    {
+      "position": 3,
+      "dueDate": "02/22/2023",
+      "deliverable": "Presentation of demo website",
+      "status": "Completed"
+    },
+    {
+      "position": 4,
+      "dueDate": "03/01/2023",
+      "deliverable": "Score player integrated ",
+      "status": "Completed"
+    },
+    {
+      "position": 5,
       "dueDate": "03/09/2023",
       "deliverable": "Project Portfolio",
       "status": "Completed"
     },
     {
-      "position": 2,
+      "position": 6,
       "dueDate": "03/22/2023",
       "deliverable": "Mid Presentation",
       "status": "Upcoming"
     },
     {
-      "position": 3,
+      "position": 7,
       "dueDate": "04/26/2023",
       "deliverable": "Final Presentation",
       "status": "Upcoming"

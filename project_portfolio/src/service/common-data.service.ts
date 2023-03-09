@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { COMMVAL } from 'src/assets/db-data/common-val';
 import {
   CommDataModel,
   Footer,
@@ -46,15 +47,16 @@ export class CommonDataService {
   >([]);
 
   constructor(private http: HttpClient) {
-    this.http.get('assets/db-data/common-val.json').subscribe({
-      next: (val: any) => {
-        this.header$.next(val['header'] as Header);
-        this.footer$.next(val['footer'] as Footer);
-        this.mentor$.next(val['mentor'] as Mentor);
-        this.teamMembers$.next(val['teamMembers'] as TeamMember[]);
-        this.milestones$.next(val['milestones'] as Milestone[]);
-      },
-    });
+    // this.http.get('../assets/db-data/common-val.json').subscribe({
+    //   next: (val: any) => {
+    const val = COMMVAL;
+    this.header$.next(val['header'] as Header);
+    this.footer$.next(val['footer'] as Footer);
+    this.mentor$.next(val['mentor'] as Mentor);
+    this.teamMembers$.next(val['teamMembers'] as TeamMember[]);
+    this.milestones$.next(val['milestones'] as Milestone[]);
+    //   },
+    // });
   }
 
   getHeader(): Observable<CommDataModel> {

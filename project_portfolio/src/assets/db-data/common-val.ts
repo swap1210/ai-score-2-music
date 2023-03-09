@@ -53,18 +53,42 @@ export const COMMVAL = {
   milestones: [
     {
       position: 1,
+      dueDate: '02/01/2023',
+      deliverable: 'Brainstormed basic blueprint',
+      status: 'Completed',
+    },
+    {
+      position: 2,
+      dueDate: '02/15/2023',
+      deliverable: 'Music Theory',
+      status: 'Completed',
+    },
+    {
+      position: 3,
+      dueDate: '02/22/2023',
+      deliverable: 'Presentation of demo website',
+      status: 'Completed',
+    },
+    {
+      position: 4,
+      dueDate: '03/01/2023',
+      deliverable: 'Score player integrated ',
+      status: 'Completed',
+    },
+    {
+      position: 5,
       dueDate: '03/09/2023',
       deliverable: 'Project Portfolio',
       status: 'Completed',
     },
     {
-      position: 2,
+      position: 6,
       dueDate: '03/22/2023',
       deliverable: 'Mid Presentation',
       status: 'Upcoming',
     },
     {
-      position: 3,
+      position: 7,
       dueDate: '04/26/2023',
       deliverable: 'Final Presentation',
       status: 'Upcoming',

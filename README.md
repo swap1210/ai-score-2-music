@@ -26,3 +26,9 @@ To deploy the page run build command like this
 ```
 ng build --base-href /caps23g2/
 ```
+
+To deploy project demo page run build command like this
+
+```
+ ng build --base-href /caps23g2/taalmaster/
+```

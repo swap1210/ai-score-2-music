@@ -52,25 +52,13 @@ export class PromptGenComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.optionsService.getOptionsWithLabel().subscribe(
-			(data: FilterModel[]) => {
-				this.filters = data;
-			},
-			(error) => {
-				console.log(error);
-			}
-		);
+		this.filters = this.optionsService.getOptionsWithLabel();
 
-		this.optionsService.getInstruments().subscribe({
-			next: (data: OptionModel[]) => {
-				this.instrumentsData = data;
-				this.filteredInstrumentsData = this.instrumentsData;
-			},
-		});
+		this.instrumentsData = this.optionsService.getInstruments();
+		this.filteredInstrumentsData = this.instrumentsData;
 
 		this.promptForm.valueChanges.subscribe({
 			next: (val) => {
-				// console.log(val);
 				this.onFormChange();
 			},
 		});

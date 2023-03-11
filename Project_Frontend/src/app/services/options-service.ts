@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { FILTER_LABEL } from '../../assets/db-data/filters-labeled';
+import { INSTRUMENTS } from '../../assets/db-data/instruments';
 import { FilterModel, OptionModel } from '../model/filter.model';
 
 @Injectable({
@@ -9,17 +11,10 @@ import { FilterModel, OptionModel } from '../model/filter.model';
 export class OptionsService {
 	constructor(private http: HttpClient) {}
 
-	getOptions() {
-		return this.http.get('assets/db-data/filters.json');
+	getInstruments(): OptionModel[] {
+		return INSTRUMENTS as OptionModel[];
 	}
-	getInstruments(): Observable<OptionModel[]> {
-		return this.http.get('assets/db-data/instruments.json') as Observable<
-			OptionModel[]
-		>;
-	}
-	getOptionsWithLabel(): Observable<FilterModel[]> {
-		return this.http.get('assets/db-data/filters-labeled.json') as Observable<
-			FilterModel[]
-		>;
+	getOptionsWithLabel(): FilterModel[] {
+		return FILTER_LABEL as FilterModel[];
 	}
 }

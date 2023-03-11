@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { COMM_DATA } from '../../assets/db-data/common-val';
 import { CommDataModel } from '../model/comm.data.model';
 import { Theme } from '../model/theme';
 
@@ -14,9 +15,7 @@ export class CommonDataService {
 		darkmode: false,
 	});
 
-	getHeader(): Observable<CommDataModel> {
-		return this.http.get(
-			'assets/db-data/common-val.json'
-		) as Observable<CommDataModel>;
+	getHeader(): CommDataModel {
+		return COMM_DATA as CommDataModel;
 	}
 }

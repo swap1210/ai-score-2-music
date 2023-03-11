@@ -1,30 +1,36 @@
 <mat-toolbar class="header-row" color="primary">
   <img class="header-app-icon" src="./assets/logo.png" />
-  <button
-    mat-button
-    tabindex="0"
-    class=""
-    [routerLink]="'/'"
-    routerLinkActive="active"
-  >
-    <span class="appName" [innerText]="header.appName"></span>
+  <button mat-button tabindex="0" class="" [routerLink]="'/'">
+    <span
+      class="appName"
+      [innerText]="(commData.header$ | async)?.appName"
+    ></span>
   </button>
   <span class="spacer"></span>
+  <button mat-button class="only-pc" [routerLink]="'/'">Home</button>
   <button
     mat-button
     class="only-pc"
-    [routerLink]="'/Menu1'"
-    routerLinkActive="active"
+    [routerLink]="'/mentor'"
+    routerLinkActive="active-tab-look"
   >
-    Menu1
+    Mentors
   </button>
   <button
     mat-button
     class="only-pc"
-    [routerLink]="'/Menu2'"
-    routerLinkActive="active"
+    [routerLink]="'/team'"
+    routerLinkActive="active-tab-look"
   >
-    Menu2
+    Team
+  </button>
+  <button
+    mat-button
+    class="only-pc"
+    [routerLink]="'/milestones'"
+    routerLinkActive="active-tab-look"
+  >
+    Milestones
   </button>
   <button
     mat-icon-button
@@ -42,14 +48,32 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="'/Menu1'" routerLinkActive="active">
-      Menu1
-    </button>
-    <button mat-menu-item [routerLink]="'/Menu2'" routerLinkActive="active">
-      Menu2
+    <button mat-menu-item [routerLink]="'/'" routerLinkActive="active-tab-look">
+      Home
     </button>
     <button
-      mat-icon-button
+      mat-menu-item
+      [routerLink]="'/mentor'"
+      routerLinkActive="active-tab-look"
+    >
+      Mentors
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="'/team'"
+      routerLinkActive="active-tab-look"
+    >
+      Team
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="'/milestones'"
+      routerLinkActive="active-tab-look"
+    >
+      Milestones
+    </button>
+    <button
+      mat-menu-item
       (click)="switchTheme()"
       aria-label="swtch theme between dark and light"
     >

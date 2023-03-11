@@ -1,0 +1,53 @@
+/* my-component.scss */
+@use "@angular/material" as mat;
+@import "../../../../theme/vars.scss";
+
+.linkLogo {
+  fill: mat.get-contrast-color-from-palette($profile-ang-primary, 500);
+}
+.linkDarkLogo {
+  fill: mat.get-contrast-color-from-palette($profile-ang-dark-primary, 500);
+}
+.member-card {
+  max-width: 20em;
+  // min-height: 44em;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-img {
+  max-width: 15em;
+  height: auto;
+  margin: auto;
+  border-radius: 50% 50%;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 1em;
+  row-gap: 2em;
+}
+p {
+  text-align: justify;
+}
+
+.mat-h2 {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.highlighted {
+  background-color: mat.get-color-from-palette($profile-ang-primary, 100);
+}
+.highlighted-dark {
+  background-color: mat.get-color-from-palette($profile-ang-dark-primary, 100);
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 14em;
+}

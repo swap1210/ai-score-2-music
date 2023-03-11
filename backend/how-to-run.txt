@@ -1,1 +1,1 @@
-Hi this a a basic walkthrough of the API program initial setup
+A walkthrough of the API program initial setup

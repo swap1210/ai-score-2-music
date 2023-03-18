@@ -1,16 +1,26 @@
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+*.md
+__pycache__/
+.vscode
+.idea/
+migrations/
+venv/
+Vagrant/
+doc/
+tools
+!tools/docker/
+Pipfile
+Pipfile.lock
+Readme.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-requirements.txt
-*.pid
-.vagrant/
-tools/vagrant/ubuntu-bionic-18.04-cloudimg-console.log
-tools/ssl/
-.vscode/
-.idea/
-migrations/
 
 # C extensions
 *.so
@@ -122,4 +132,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-

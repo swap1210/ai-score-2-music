@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+coverage = "==4.5.3"
+black = "==19.3b0"
+pygments = "*"
+coreapi = "*"
+markdown = "*"
+
+[packages]
+django = "==2.2.13"
+psycopg2 = "==2.8.2"
+djangorestframework = "==3.9.3"
+gunicorn = "==19.9.0"
+openai = "*"
+
+[requires]
+python_version = "3.7"

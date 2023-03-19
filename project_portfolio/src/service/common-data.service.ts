@@ -6,6 +6,7 @@ import {
   CommDataModel,
   Footer,
   Header,
+  Home,
   Mentor,
   Milestone,
   TeamMember,
@@ -24,6 +25,10 @@ export class CommonDataService {
     appIconLink: '',
     appDesc: '',
     appName: '',
+  });
+
+  public home$: BehaviorSubject<Home> = new BehaviorSubject<Home>({
+    text: '',
   });
 
   public footer$: BehaviorSubject<Footer> = new BehaviorSubject<Footer>({
@@ -51,6 +56,7 @@ export class CommonDataService {
     //   next: (val: any) => {
     const val = COMMVAL;
     this.header$.next(val['header'] as Header);
+    this.home$.next(val['home'] as Home);
     this.footer$.next(val['footer'] as Footer);
     this.mentor$.next(val['mentor'] as Mentor);
     this.teamMembers$.next(val['teamMembers'] as TeamMember[]);

@@ -1,23 +1,32 @@
+@import "../../../theme/vars.scss";
+
 .home-main {
   position: relative;
   display: flex;
   column-gap: 2em;
-  margin: 1dvw/2 0;
+  row-gap: 2em;
+  margin: 1dvw 0;
+  @media screen and (max-width: $mobile-width) {
+    flex-wrap: wrap;
+  }
+  justify-content: center;
 }
 
 .home-image {
-  position: absolute;
   max-height: 30em;
+  @media screen and (max-width: $mobile-width) {
+    max-height: 15em;
+  }
   opacity: 60%;
-  filter: blur(0.4em);
+  filter: blur(0.3em);
   -webkit-filter: blur(0.4em);
 }
 .para {
-  margin-left: 1dvw;
+  margin-left: 0.5dvw;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 0.5em;
-  padding: 3em 1.5em;
+  padding: 2em 1em;
   font-size: large;
   line-height: 1.5em;
   text-align: justify;
@@ -29,10 +38,21 @@
 
 .block {
   width: 70dvw;
-  margin: 3em 1em;
+  height: 4em;
+  margin: 1em 1em;
+  padding-top: 1em;
+  font-size: large;
 }
 .real-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

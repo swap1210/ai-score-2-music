@@ -23,7 +23,7 @@
 }
 
 .appName {
-  font-size: 1.4em;
+  font-size: 2em;
 }
 .appDesc {
   font-size: 0.8em;
@@ -49,4 +49,12 @@
   @media only screen and (min-width: $mobile-width) {
     display: none;
   }
+}
+.desc {
+  font-size: small;
+}
+.app-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

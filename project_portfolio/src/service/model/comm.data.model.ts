@@ -1,9 +1,14 @@
 export interface CommDataModel {
   header: Header;
+  home: Home;
   footer: Footer;
   mentor: Mentor;
   teamMembers: TeamMember[];
   milestones: Milestone[];
+}
+
+export interface Home {
+  text: String;
 }
 
 export interface Header {

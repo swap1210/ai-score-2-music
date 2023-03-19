@@ -1,8 +1,23 @@
 export const COMMVAL = {
   header: {
     appName: 'Taalmaster',
-    appDesc: '',
+    appDesc: 'Tool to generate music powered by chatGPT',
     appIconLink: ' ',
+  },
+  home: {
+    text: `Introducing an innovative AI-powered music generation app
+  <b>Taalmaster</b>, that utilizes ChatGPT, a state-of-the-art language
+  model, to create custom music tailored to your preferences.<br /><br />
+  The app is designed to provide users with a unique and personalized music
+  experience. It uses natural language processing to analyze user input and
+  generates music that matches their desired mood, tempo, style, and
+  genre.<br /><br />
+  Using the app is easy and straightforward. Users simply need to input
+  their desired parameters into the app's chat interface, such as the type
+  of instruments they want to use, the melody they prefer, or the type of
+  emotion they want the music to convey. ChatGPT then interprets the input
+  and generates an original piece of music that is unique to the user's
+  preferences.`,
   },
 
   mentor: {
@@ -37,7 +52,7 @@ export const COMMVAL = {
       email: 'ratnatejanerusu21@gmail.com',
     },
     {
-      imgSrc: './assets/Swapnil_Web.png',
+      imgSrc: './assets/Swapnil_Webv2.png',
       title: 'Swapnil Patel',
       bio: 'As a passionate and detail-oriented individual, I take pride in producing clean, efficient, and maintainable code. Ping me if you have an awesome project idea and you need help executing it.',
       linkedin: 'https://www.linkedin.com/in/swap1210/',

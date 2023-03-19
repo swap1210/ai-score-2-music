@@ -1,10 +1,16 @@
 <mat-toolbar class="header-row" color="primary">
   <img class="header-app-icon" src="./assets/logo.png" />
   <button mat-button tabindex="0" class="" [routerLink]="'/'">
-    <span
-      class="appName"
-      [innerText]="(commData.header$ | async)?.appName"
-    ></span>
+    <div class="app-button">
+      <span
+        class="appName"
+        [innerText]="(commData.header$ | async)?.appName"
+      ></span>
+      <span
+        class="desc only-pc"
+        [innerText]="(commData.header$ | async)?.appDesc"
+      ></span>
+    </div>
   </button>
   <span class="spacer"></span>
   <button mat-button class="only-pc" [routerLink]="'/'">Home</button>

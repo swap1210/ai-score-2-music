@@ -3,7 +3,7 @@
 ## AI Score to Music
 
 <br>
-<table><tr><td>
+<table border="0"><tr><td>
 <img src="./project_portfolio/src/assets/logo.png" height="150em"/></td><td>Before proceeding please make sure you have <a href="https://nodejs.org/en/" target="_blank">Node</a> installed in your system.</td>
 </tr></table>
 <br>

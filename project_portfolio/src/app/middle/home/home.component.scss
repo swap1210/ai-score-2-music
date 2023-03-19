@@ -17,9 +17,10 @@
   @media screen and (max-width: $mobile-width) {
     max-height: 15em;
   }
-  opacity: 60%;
   filter: blur(0.3em);
-  -webkit-filter: blur(0.4em);
+  -webkit-filter: blur(0.3em);
+  opacity: 60%;
+  animation: blurIn 3s;
 }
 .para {
   margin-left: 0.5dvw;
@@ -30,6 +31,7 @@
   font-size: large;
   line-height: 1.5em;
   text-align: justify;
+  animation: fadeIn 5s;
 }
 
 .para-darker {
@@ -47,6 +49,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@keyframes blurIn {
+  0% {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    opacity: 100%;
+  }
+  100% {
+    filter: blur(0.3em);
+    -webkit-filter: blur(0.3em);
+    opacity: 60%;
+  }
 }
 @keyframes fadeIn {
   0% {

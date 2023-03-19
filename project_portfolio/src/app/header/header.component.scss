@@ -41,6 +41,7 @@
 }
 
 .only-pc {
+  font-size: inherit;
   @media only screen and (max-width: $mobile-width) {
     display: none;
   }

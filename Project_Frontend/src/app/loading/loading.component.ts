@@ -13,6 +13,7 @@ export class LoadingComponent implements OnInit {
 
 	ngOnInit() {
 		let self = this;
+		self.timed = 0;
 		this.loadingService.loading$.subscribe({
 			next: (stillLoading) => {
 				if (stillLoading) {

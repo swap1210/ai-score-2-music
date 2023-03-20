@@ -6,15 +6,17 @@
   column-gap: 2em;
   row-gap: 2em;
   margin: 1dvw 0;
-  @media screen and (max-width: $mobile-width) {
+  justify-content: center;
+  @media screen and (max-width: ($mobile-width+300)) {
     flex-wrap: wrap;
   }
-  justify-content: center;
 }
 
 .home-image {
+  flex: 1;
   max-height: 30em;
-  @media screen and (max-width: $mobile-width) {
+  object-fit: scale-down;
+  @media screen and (max-width: ($mobile-width+300)) {
     max-height: 15em;
   }
   filter: blur(0.3em);
@@ -39,6 +41,7 @@
 }
 
 .block {
+  flex: 1;
   width: 70dvw;
   height: 4em;
   margin: 1em 1em;

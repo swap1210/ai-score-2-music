@@ -42,12 +42,19 @@
 
 .only-pc {
   font-size: inherit;
-  @media only screen and (max-width: $mobile-width) {
+  @media only screen and (max-width: ($mobile-width+200)) {
+    display: none;
+  }
+}
+
+.wide-only-pc {
+  font-size: inherit;
+  @media only screen and (max-width: ($mobile-width+300)) {
     display: none;
   }
 }
 .only-mobile {
-  @media only screen and (min-width: $mobile-width) {
+  @media only screen and (min-width: ($mobile-width+200)) {
     display: none;
   }
 }

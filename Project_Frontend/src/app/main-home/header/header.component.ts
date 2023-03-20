@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Header } from '../../model/header';
+import { Header } from '../../model/comm.data.model';
 import { CommonDataService } from '../../services/common-data.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	header: Header;
 	constructor(public commData: CommonDataService) {}
 	ngOnInit(): void {
-		this.header = this.commData.getHeader().header;
+		this.header = this.commData.getData().header;
 	}
 
 	//prefer active unsubscribing from all the hotpatch data from firebase

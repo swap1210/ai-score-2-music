@@ -10,6 +10,7 @@ import { FilterModel, OptionModel } from '../../model/filter.model';
 import { OptionsService } from '../../services/options-service';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { GptService } from '../../services/gpt.service';
 
 @Component({
 	selector: 'app-prompt-gen',
@@ -32,12 +33,12 @@ export class PromptGenComponent implements OnInit {
 	};
 
 	separatorKeysCodes: number[] = [ENTER, COMMA];
-	// instrumentCtrl = new FormControl('');
-	// filteredFruits: Observable<string[]>;
-	// fruits: string[] = [];
-	// allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
 
-	constructor(private fb: FormBuilder, public optionsService: OptionsService) {
+	constructor(
+		private fb: FormBuilder,
+		public optionsService: OptionsService,
+		public gprService: GptService
+	) {
 		this.promptForm = this.fb.group({
 			dynamics: [null, []],
 			tempo: [null, []],

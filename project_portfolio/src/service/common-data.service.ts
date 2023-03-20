@@ -51,23 +51,13 @@ export class CommonDataService {
     Milestone[]
   >([]);
 
-  constructor(private http: HttpClient) {
-    // this.http.get('../assets/db-data/common-val.json').subscribe({
-    //   next: (val: any) => {
-    const val = COMMVAL;
-    this.header$.next(val['header'] as Header);
-    this.home$.next(val['home'] as Home);
-    this.footer$.next(val['footer'] as Footer);
-    this.mentor$.next(val['mentor'] as Mentor);
-    this.teamMembers$.next(val['teamMembers'] as TeamMember[]);
-    this.milestones$.next(val['milestones'] as Milestone[]);
-    //   },
-    // });
-  }
-
-  getHeader(): Observable<CommDataModel> {
-    return this.http.get(
-      'assets/db-data/common-val.json'
-    ) as Observable<CommDataModel>;
+  constructor() {
+    const val: CommDataModel = COMMVAL;
+    this.header$.next(val.header);
+    this.home$.next(val.home);
+    this.footer$.next(val.footer);
+    this.mentor$.next(val.mentor);
+    this.teamMembers$.next(val.teamMembers);
+    this.milestones$.next(val.milestones);
   }
 }

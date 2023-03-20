@@ -81,5 +81,7 @@
 			</div>
 		</mat-card-content>
 	</mat-card>
-	<app-editor></app-editor>
+	<app-editor
+		[abcString]="gprService.getGPTResponse(narrativeData) | async"
+	></app-editor>
 </div>

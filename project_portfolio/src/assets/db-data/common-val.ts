@@ -1,4 +1,6 @@
-export const COMMVAL = {
+import { CommDataModel } from 'src/service/model/comm.data.model';
+
+export const COMMVAL: CommDataModel = {
   header: {
     appName: 'Taalmaster',
     appDesc: 'Tool to generate music powered by chatGPT',

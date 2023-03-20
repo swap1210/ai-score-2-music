@@ -11,6 +11,8 @@ import { OptionsService } from '../../services/options-service';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { GptService } from '../../services/gpt.service';
+import { LoadingService } from '../../loading/loading.service';
+import { Subject } from 'rxjs';
 
 @Component({
 	selector: 'app-prompt-gen',
@@ -18,13 +20,14 @@ import { GptService } from '../../services/gpt.service';
 	styleUrls: ['./prompt-gen.component.scss'],
 })
 export class PromptGenComponent implements OnInit {
+	public chatShh: string;
 	narrativeData = '';
 	promptForm: FormGroup;
 	filters: FilterModel[] = [];
-
 	instrumentsData: OptionModel[] = [];
 	selectedInstrumentsData: OptionModel[] = [];
 	filteredInstrumentsData: OptionModel[] = [];
+	currentScore$: Subject<string> = new Subject();
 	@ViewChild('instrumentCtrlId') instrumentInput: ElementRef<HTMLInputElement>;
 
 	config = {
@@ -37,7 +40,8 @@ export class PromptGenComponent implements OnInit {
 	constructor(
 		private fb: FormBuilder,
 		public optionsService: OptionsService,
-		public gprService: GptService
+		public gptService: GptService,
+		private ls: LoadingService
 	) {
 		this.promptForm = this.fb.group({
 			dynamics: [null, []],
@@ -63,7 +67,27 @@ export class PromptGenComponent implements OnInit {
 				this.onFormChange();
 			},
 		});
+		this.chatShh = sessionStorage.getItem('GPT_TOK');
+		if (!this.chatShh || this.chatShh == 'null' || this.chatShh == '') {
+			this.chatShh = prompt('Please enter your API key', '');
+			sessionStorage.setItem('GPT_TOK', this.chatShh);
+		} else {
+			this.chatShh = sessionStorage.getItem('GPT_TOK');
+		}
 	}
+
+	callGPT = () => {
+		this.ls.loadingOn();
+		this.gptService.getGPTResponse(this.chatShh, this.narrativeData).subscribe({
+			next: (resScore: string) => {
+				console.log(resScore);
+				this.currentScore$.next(resScore);
+			},
+			complete: () => {
+				this.ls.loadingOff();
+			},
+		});
+	};
 
 	// Executed When Form Is Submitted
 	onFormChange() {

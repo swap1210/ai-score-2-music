@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 // declare var abcjs: any;
 import * as abcjs from 'abcjs';
+import { Subject } from 'rxjs';
 
 declare var ABCJS: any;
 
@@ -19,15 +20,19 @@ declare var ABCJS: any;
 })
 export class EditorComponent implements OnInit {
 	midiUrl = '';
-	@Input() abcString: string = '';
-	visualObj = abcjs.renderAbc('paper', this.abcString);
+	abcString: string = '';
+	// visualObj = abcjs.renderAbc('paper', this.abcString);
 	tune: any;
 	synth: any;
+	@Input() newScore: Subject<string>;
 
 	constructor() {}
 
 	ngOnInit() {
-		this.onMidi();
+		this.newScore.subscribe((v) => {
+			this.abcString = v;
+			this.onMidi();
+		});
 	}
 
 	onMidi() {

@@ -3,8 +3,8 @@ import { CommDataModel } from '../../app/model/comm.data.model';
 export const COMM_DATA: CommDataModel = {
 	header: {
 		appName: 'Taalmaster',
-		appDesc: '',
-		appIconLink: ' ',
+		appDesc: 'Tool to generate music powered by chatGPT',
+		appIconLink: './assets/logo-ico.png',
 	},
 	footer: {
 		section1: '',

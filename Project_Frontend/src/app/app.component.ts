@@ -14,10 +14,7 @@ export class AppComponent implements OnInit {
 		private error: MessagesService
 	) {}
 
-	ngOnInit() {
-		// this.load.loadingOn();
-		// this.error.showErrors('fgdfgd');
-	}
+	ngOnInit() {}
 
 	logout() {
 		this.auth.logout();

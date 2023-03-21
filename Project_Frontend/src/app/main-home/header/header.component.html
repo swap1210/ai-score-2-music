@@ -4,11 +4,13 @@
 		<button
 			mat-button
 			tabindex="0"
-			class=""
 			[routerLink]="'/home'"
 			routerLinkActive="active"
 		>
-			<span class="appName" [innerText]="header.appName"></span>
+			<div class="app-button">
+				<span class="appName" [innerText]="header.appName"></span>
+				<span class="desc wide-only-pc" [innerText]="header.appDesc"></span>
+			</div>
 		</button>
 		<button
 			mat-button

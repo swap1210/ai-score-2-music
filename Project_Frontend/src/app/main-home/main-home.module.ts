@@ -10,6 +10,7 @@ import { PromptGenComponent } from './prompt-gen/prompt-gen.component';
 import { HomeMaterialModule } from './home-material/home-material.module';
 import { MusicxmlPlayerComponent } from './prompt-gen/musicxml-player/musicxml-player.component';
 import { EditorComponent } from './home/editor/editor.component';
+import { KeyDialog } from './key-dialog/key-dialog.component';
 
 @NgModule({
 	declarations: [
@@ -20,6 +21,7 @@ import { EditorComponent } from './home/editor/editor.component';
 		PromptGenComponent,
 		MusicxmlPlayerComponent,
 		EditorComponent,
+		KeyDialog,
 	],
 	imports: [CommonModule, HomeMaterialModule, MainHomeRoutingModule],
 })

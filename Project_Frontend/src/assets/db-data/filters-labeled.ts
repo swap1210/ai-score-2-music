@@ -115,6 +115,14 @@ export const FILTER_LABEL = [
 				label: '12/8',
 				value: '12/8',
 			},
+			{
+				label: '12/16',
+				value: '12/16',
+			},
+			{
+				label: '1/16',
+				value: '1/16',
+			},
 		],
 	},
 	{

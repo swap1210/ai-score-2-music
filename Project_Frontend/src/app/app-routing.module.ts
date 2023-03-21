@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EditorComponent } from './main-home/home/editor/editor.component';
 import { LoginComponent } from './login/login.component';
+import { FlatioEditorComponent } from './flatio-editor/flatio-editor.component';
 
 const routes: Routes = [
 	{
 		path: 'editor',
-		component: EditorComponent,
+		component: FlatioEditorComponent,
 	},
 	{
 		path: 'login',

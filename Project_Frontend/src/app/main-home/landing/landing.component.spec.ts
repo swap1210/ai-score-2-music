@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HistoryPanelComponent } from './history-panel.component';
+import { LandingComponent } from './landing.component';
 
-describe('HistoryPanelComponent', () => {
-  let component: HistoryPanelComponent;
-  let fixture: ComponentFixture<HistoryPanelComponent>;
+describe('LandingComponent', () => {
+  let component: LandingComponent;
+  let fixture: ComponentFixture<LandingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistoryPanelComponent ]
+      declarations: [ LandingComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HistoryPanelComponent);
+    fixture = TestBed.createComponent(LandingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

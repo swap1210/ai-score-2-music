@@ -5,11 +5,9 @@ import { MainHomeRoutingModule } from './main-home-routing.module';
 import { MainHomeComponent } from './main-home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HistoryPanelComponent } from './home/history-panel/history-panel.component';
 import { PromptGenComponent } from './prompt-gen/prompt-gen.component';
 import { HomeMaterialModule } from './home-material/home-material.module';
-import { MusicxmlPlayerComponent } from './prompt-gen/musicxml-player/musicxml-player.component';
-import { EditorComponent } from './home/editor/editor.component';
+import { EditorComponent } from './prompt-gen/editor/editor.component';
 import { KeyDialog } from './key-dialog/key-dialog.component';
 
 @NgModule({
@@ -17,9 +15,7 @@ import { KeyDialog } from './key-dialog/key-dialog.component';
 		MainHomeComponent,
 		HeaderComponent,
 		FooterComponent,
-		HistoryPanelComponent,
 		PromptGenComponent,
-		MusicxmlPlayerComponent,
 		EditorComponent,
 		KeyDialog,
 	],

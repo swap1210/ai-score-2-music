@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonDataService } from '../services/common-data.service';
-import { KeyDialog, DialogData } from './key-dialog/key-dialog.component';
+import { DialogData, KeyDialog } from './key-dialog/key-dialog.component';
 
 @Component({
 	selector: 'app-main-home',

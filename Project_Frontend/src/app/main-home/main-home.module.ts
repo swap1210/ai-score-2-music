@@ -9,6 +9,7 @@ import { PromptGenComponent } from './prompt-gen/prompt-gen.component';
 import { HomeMaterialModule } from './home-material/home-material.module';
 import { EditorComponent } from './prompt-gen/editor/editor.component';
 import { KeyDialog } from './key-dialog/key-dialog.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
 	declarations: [
@@ -18,6 +19,7 @@ import { KeyDialog } from './key-dialog/key-dialog.component';
 		PromptGenComponent,
 		EditorComponent,
 		KeyDialog,
+		LandingComponent,
 	],
 	imports: [CommonModule, HomeMaterialModule, MainHomeRoutingModule],
 })

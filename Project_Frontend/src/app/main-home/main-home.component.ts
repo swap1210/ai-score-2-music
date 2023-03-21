@@ -1,6 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { CommonDataService } from '../services/common-data.service';
+import {
+	CommonDataService,
+	CurrentState,
+} from '../services/common-data.service';
 import { DialogData, KeyDialog } from './key-dialog/key-dialog.component';
 
 @Component({
@@ -20,6 +23,14 @@ export class MainHomeComponent implements OnInit, OnDestroy {
 				apiFound: true,
 			});
 		}
+
+		this.commData.currentState$.subscribe({
+			next: (val: CurrentState) => {
+				if (!val.apiFound) {
+					this.openDialog();
+				}
+			},
+		});
 	}
 	ngOnInit(): void {}
 
@@ -38,7 +49,6 @@ export class MainHomeComponent implements OnInit, OnDestroy {
 				this.commData.currentState$.next({
 					apiFound: false,
 				});
-				this.openDialog();
 			} else {
 				sessionStorage.setItem('GPT_TOK', result.key);
 				this.commData.currentState$.next({

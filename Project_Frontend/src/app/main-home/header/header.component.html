@@ -26,7 +26,6 @@
 			class="no-mob"
 			[routerLink]="'/home/editor'"
 			routerLinkActive="active"
-			*ngIf="(commData.currentState$ | async).apiFound"
 		>
 			Music Editor
 		</button>
@@ -51,6 +50,7 @@
 				mat-menu-item
 				[routerLink]="'/home/music-gen'"
 				routerLinkActive="active"
+				*ngIf="(commData.currentState$ | async).apiFound"
 			>
 				Prompt Generator
 			</button>

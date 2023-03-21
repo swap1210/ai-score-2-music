@@ -1,8 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
+import { COMM_DATA } from '../../assets/db-data/common-val';
 import { CommDataModel } from '../model/comm.data.model';
 import { Theme } from '../model/theme';
+
+export interface CurrentState {
+	apiFound: boolean;
+}
 
 @Injectable({
 	providedIn: 'root',
@@ -14,9 +19,12 @@ export class CommonDataService {
 		darkmode: false,
 	});
 
-	getHeader(): Observable<CommDataModel> {
-		return this.http.get(
-			'assets/db-data/common-val.json'
-		) as Observable<CommDataModel>;
+	public currentState$: BehaviorSubject<CurrentState> =
+		new BehaviorSubject<CurrentState>({
+			apiFound: false,
+		});
+
+	getData(): CommDataModel {
+		return COMM_DATA;
 	}
 }

@@ -1,0 +1,64 @@
+/* my-component.scss */
+@use "@angular/material" as mat;
+@import "../../theme/vars.scss";
+
+.badge {
+  margin: 2px;
+}
+//define how the active tab looks like
+.active-tab-look {
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.header-app-icon {
+  height: 3em;
+  border-radius: 0.5em;
+  margin-top: 0.3em;
+  margin-right: 0.3em;
+}
+
+.appName {
+  font-size: 2em;
+}
+.appDesc {
+  font-size: 0.8em;
+}
+.linkLogo {
+  fill: mat.get-contrast-color-from-palette($profile-ang-primary, 500);
+}
+.linkDarkLogo {
+  fill: mat.get-contrast-color-from-palette($profile-ang-dark-primary, 500);
+}
+
+.header-row {
+  height: 4em;
+  column-gap: 1em;
+}
+
+.only-pc {
+  font-size: inherit;
+  @media only screen and (max-width: ($mobile-width+200)) {
+    display: none;
+  }
+}
+
+.wide-only-pc {
+  font-size: inherit;
+  @media only screen and (max-width: ($mobile-width+300)) {
+    display: none;
+  }
+}
+.only-mobile {
+  @media only screen and (min-width: ($mobile-width+200)) {
+    display: none;
+  }
+}
+.desc {
+  font-size: small;
+}
+.app-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

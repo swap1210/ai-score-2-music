@@ -61,9 +61,17 @@
 							</mat-option>
 						</mat-autocomplete>
 					</mat-form-field>
-				</form></ng-container
-			>
-			<div
+					<button
+						mat-raised-button
+						class="main-button"
+						(click)="callGPT()"
+						color="primary"
+					>
+						Generate music score
+					</button>
+				</form>
+			</ng-container>
+			<!-- <div
 				class="prompt-row prompt"
 				*ngIf="narrativeData != ''"
 				[cdkCopyToClipboard]="narrativeData"
@@ -78,8 +86,11 @@
 					matTooltip="Click to copy the prompt"
 					fontIcon="file_copy"
 				></mat-icon>
-			</div>
+			</div> -->
 		</mat-card-content>
 	</mat-card>
-	<app-musicxml-player></app-musicxml-player>
+	<app-editor
+		[newScore]="currentScore$"
+		[ngStyle]="{ display: (currentScore$ | async) ? 'block' : 'none' }"
+	></app-editor>
 </div>

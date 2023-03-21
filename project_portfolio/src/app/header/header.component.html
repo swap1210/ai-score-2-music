@@ -1,0 +1,95 @@
+<mat-toolbar class="header-row" color="primary">
+  <img class="header-app-icon" src="./assets/logo.png" />
+  <button mat-button tabindex="0" class="" [routerLink]="'/'">
+    <div class="app-button">
+      <span
+        class="appName"
+        [innerText]="(commData.header$ | async)?.appName"
+      ></span>
+      <span
+        class="desc wide-only-pc"
+        [innerText]="(commData.header$ | async)?.appDesc"
+      ></span>
+    </div>
+  </button>
+  <span class="spacer"></span>
+  <button mat-button class="only-pc" [routerLink]="'/'">Home</button>
+  <button
+    mat-button
+    class="only-pc"
+    [routerLink]="'/mentor'"
+    routerLinkActive="active-tab-look"
+  >
+    Mentors
+  </button>
+  <button
+    mat-button
+    class="only-pc"
+    [routerLink]="'/team'"
+    routerLinkActive="active-tab-look"
+  >
+    Team
+  </button>
+  <button
+    mat-button
+    class="only-pc"
+    [routerLink]="'/milestones'"
+    routerLinkActive="active-tab-look"
+  >
+    Milestones
+  </button>
+  <button
+    mat-icon-button
+    (click)="switchTheme()"
+    aria-label="swtch theme between dark and light"
+    class="only-pc"
+  >
+    <mat-icon
+      [innerText]="
+        (commData.themeState$ | async)!.darkmode ? 'dark_mode' : 'brightness_5'
+      "
+    ></mat-icon>
+  </button>
+  <button class="only-mobile" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="'/'" routerLinkActive="active-tab-look">
+      Home
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="'/mentor'"
+      routerLinkActive="active-tab-look"
+    >
+      Mentors
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="'/team'"
+      routerLinkActive="active-tab-look"
+    >
+      Team
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="'/milestones'"
+      routerLinkActive="active-tab-look"
+    >
+      Milestones
+    </button>
+    <button
+      mat-menu-item
+      (click)="switchTheme()"
+      aria-label="swtch theme between dark and light"
+    >
+      <mat-icon
+        [innerText]="
+          (commData.themeState$ | async)!.darkmode
+            ? 'dark_mode'
+            : 'brightness_5'
+        "
+      ></mat-icon>
+    </button>
+  </mat-menu>
+</mat-toolbar>

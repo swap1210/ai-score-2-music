@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatDialogModule } from '@angular/material/dialog';
 
 let components = [
 	CommonModule,
@@ -32,6 +33,7 @@ let components = [
 	MatChipsModule,
 	MatAutocompleteModule,
 	FormsModule,
+	MatDialogModule,
 ];
 
 @NgModule({

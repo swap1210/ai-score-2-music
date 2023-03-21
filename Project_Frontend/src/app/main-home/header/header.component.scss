@@ -42,6 +42,7 @@
 }
 
 .no-mob {
+	font-size: inherit;
 	@media only screen and (max-width: $mobile-width) {
 		display: none;
 	}
@@ -50,4 +51,26 @@
 	@media only screen and (min-width: $mobile-width) {
 		display: none;
 	}
+}
+
+.appNameDiv {
+	display: flex;
+	flex-direction: column;
+}
+
+.wide-only-pc {
+	font-size: inherit;
+	@media only screen and (max-width: ($mobile-width+300)) {
+		display: none;
+	}
+}
+
+.app-button {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.appName {
+	font-size: 2em;
 }

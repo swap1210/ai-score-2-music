@@ -1,0 +1,91 @@
+@use "@angular/material" as mat;
+
+$mat-profile-accent: (
+  50: #05386b,
+  100: #05386b,
+  500: #05386b,
+  700: #000,
+  contrast: (
+    50: #01ffff,
+    100: #e0ffff,
+    500: #01ffff,
+    700: #000,
+  ),
+);
+
+$mat-profile-warn: (
+  50: #379683,
+  100: #379683,
+  500: #379683,
+  700: #000,
+  contrast: (
+    50: #edf5e1,
+    100: #edf5e1,
+    500: #edf5e1,
+    700: #000,
+  ),
+);
+
+$mat-profile-primary: (
+  50: #87d3f8,
+  100: #87d3f8,
+  500: #01b7ea,
+  700: #000,
+  contrast: (
+    50: #05386b,
+    100: #05386b,
+    500: #05386b,
+    700: #000,
+  ),
+);
+
+$profile-ang-primary: mat.define-palette($mat-profile-primary);
+$profile-ang-accent: mat.define-palette($mat-profile-accent);
+$profile-ang-warn: mat.define-palette($mat-profile-warn);
+
+//Dark theme start
+
+$mat-profile-dark-warn: (
+  50: #0b0c10,
+  100: #0b0c10,
+  500: #0b0c10,
+  700: #000,
+  contrast: (
+    50: #c5c6c7,
+    100: #c5c6c7,
+    500: #c5c6c7,
+    700: #000,
+  ),
+);
+
+$mat-profile-dark-accent: (
+  50: #c5c6c7,
+  100: #c5c6c7,
+  500: #c5c6c7,
+  700: #000,
+  contrast: (
+    50: #66fcf1,
+    100: #66fcf1,
+    500: #66fcf1,
+    700: #000,
+  ),
+);
+
+$mat-profile-dark-primary: (
+  50: #0b0c10,
+  100: #0b0c10,
+  500: #0b0c10,
+  700: #000,
+  contrast: (
+    50: #66fcf1,
+    100: #66fcf1,
+    500: #66fcf1,
+    700: #000,
+  ),
+);
+
+$profile-ang-dark-primary: mat.define-palette($mat-profile-dark-primary);
+$profile-ang-dark-accent: mat.define-palette($mat-profile-dark-accent);
+$profile-ang-dark-warn: mat.define-palette($mat-profile-dark-warn);
+
+$mobile-width: 540px;

@@ -10,6 +10,9 @@ import { FilterModel, OptionModel } from '../../model/filter.model';
 import { OptionsService } from '../../services/options-service';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { GptService } from '../../services/gpt.service';
+import { LoadingService } from '../../loading/loading.service';
+import { Subject } from 'rxjs';
 
 @Component({
 	selector: 'app-prompt-gen',
@@ -17,13 +20,14 @@ import { MatChipInputEvent } from '@angular/material/chips';
 	styleUrls: ['./prompt-gen.component.scss'],
 })
 export class PromptGenComponent implements OnInit {
+	public chatShh: string;
 	narrativeData = '';
 	promptForm: FormGroup;
 	filters: FilterModel[] = [];
-
 	instrumentsData: OptionModel[] = [];
 	selectedInstrumentsData: OptionModel[] = [];
 	filteredInstrumentsData: OptionModel[] = [];
+	currentScore$: Subject<string> = new Subject();
 	@ViewChild('instrumentCtrlId') instrumentInput: ElementRef<HTMLInputElement>;
 
 	config = {
@@ -32,12 +36,13 @@ export class PromptGenComponent implements OnInit {
 	};
 
 	separatorKeysCodes: number[] = [ENTER, COMMA];
-	// instrumentCtrl = new FormControl('');
-	// filteredFruits: Observable<string[]>;
-	// fruits: string[] = [];
-	// allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
 
-	constructor(private fb: FormBuilder, public optionsService: OptionsService) {
+	constructor(
+		private fb: FormBuilder,
+		public optionsService: OptionsService,
+		public gptService: GptService,
+		private ls: LoadingService
+	) {
 		this.promptForm = this.fb.group({
 			dynamics: [null, []],
 			tempo: [null, []],
@@ -52,29 +57,31 @@ export class PromptGenComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.optionsService.getOptionsWithLabel().subscribe(
-			(data: FilterModel[]) => {
-				this.filters = data;
-			},
-			(error) => {
-				console.log(error);
-			}
-		);
+		this.filters = this.optionsService.getOptionsWithLabel();
 
-		this.optionsService.getInstruments().subscribe({
-			next: (data: OptionModel[]) => {
-				this.instrumentsData = data;
-				this.filteredInstrumentsData = this.instrumentsData;
-			},
-		});
+		this.instrumentsData = this.optionsService.getInstruments();
+		this.filteredInstrumentsData = this.instrumentsData;
 
 		this.promptForm.valueChanges.subscribe({
 			next: (val) => {
-				// console.log(val);
 				this.onFormChange();
 			},
 		});
+		this.chatShh = sessionStorage.getItem('GPT_TOK');
 	}
+
+	callGPT = () => {
+		this.ls.loadingOn();
+		this.gptService.getGPTResponse(this.chatShh, this.narrativeData).subscribe({
+			next: (resScore: string) => {
+				console.log(resScore);
+				this.currentScore$.next(resScore);
+			},
+			complete: () => {
+				this.ls.loadingOff();
+			},
+		});
+	};
 
 	// Executed When Form Is Submitted
 	onFormChange() {
@@ -95,7 +102,11 @@ export class PromptGenComponent implements OnInit {
 			}
 		});
 		if (count) {
-			// this.narrativeData += ' in guitar';
+			if (this.selectedInstrumentsData.length) {
+				this.narrativeData +=
+					' add instruments like ' +
+					this.selectedInstrumentsData.map<string>((inst) => inst.label);
+			}
 		} else {
 			this.narrativeData = '';
 		}
@@ -112,7 +123,7 @@ export class PromptGenComponent implements OnInit {
 		// Clear the input value
 		event.chipInput!.clear();
 
-		this.promptForm.get(['instrumentCtrl']).setValue(null);
+		// this.promptForm.get(['instrumentCtrl']).setValue(null);
 	}
 
 	remove(instrument: OptionModel): void {

@@ -10,7 +10,7 @@ const routes: Routes = [
 		component: MainHomeComponent,
 		children: [
 			{
-				path: 'prompt-gen',
+				path: 'music-gen',
 				component: PromptGenComponent,
 			},
 			{

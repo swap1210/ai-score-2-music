@@ -15,7 +15,7 @@
 		<button
 			mat-button
 			class="no-mob"
-			[routerLink]="'/home/prompt-gen'"
+			[routerLink]="'/home/music-gen'"
 			routerLinkActive="active"
 			*ngIf="(commData.currentState$ | async).apiFound"
 		>
@@ -34,7 +34,7 @@
 		<button
 			mat-icon-button
 			(click)="switchTheme()"
-			aria-label="swtch theme between dark and light"
+			aria-label="switch theme between dark and light"
 			class="no-mob"
 		>
 			<mat-icon
@@ -49,7 +49,7 @@
 		<mat-menu #menu="matMenu">
 			<button
 				mat-menu-item
-				[routerLink]="'/home/prompt-gen'"
+				[routerLink]="'/home/music-gen'"
 				routerLinkActive="active"
 			>
 				Prompt Generator

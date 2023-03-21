@@ -17,14 +17,16 @@
 			class="no-mob"
 			[routerLink]="'/home/prompt-gen'"
 			routerLinkActive="active"
+			*ngIf="(commData.currentState$ | async).apiFound"
 		>
-			Prompt Generator
+			Music Generator
 		</button>
 		<button
 			mat-button
 			class="no-mob"
 			[routerLink]="'/home/editor'"
 			routerLinkActive="active"
+			*ngIf="(commData.currentState$ | async).apiFound"
 		>
 			Music Editor
 		</button>

@@ -68,12 +68,6 @@ export class PromptGenComponent implements OnInit {
 			},
 		});
 		this.chatShh = sessionStorage.getItem('GPT_TOK');
-		if (!this.chatShh || this.chatShh == 'null' || this.chatShh == '') {
-			this.chatShh = prompt('Please enter your API key', '');
-			sessionStorage.setItem('GPT_TOK', this.chatShh);
-		} else {
-			this.chatShh = sessionStorage.getItem('GPT_TOK');
-		}
 	}
 
 	callGPT = () => {

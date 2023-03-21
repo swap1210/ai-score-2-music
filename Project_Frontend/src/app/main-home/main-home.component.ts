@@ -13,10 +13,12 @@ export class MainHomeComponent implements OnInit, OnDestroy {
 	constructor(public commData: CommonDataService, public dialog: MatDialog) {
 		this.chatShh = sessionStorage.getItem('GPT_TOK');
 		if (!this.chatShh || this.chatShh == 'null' || this.chatShh == '') {
-			this.chatShh = prompt('Please enter your API key', '');
-			sessionStorage.setItem('GPT_TOK', this.chatShh);
+			this.openDialog();
 		} else {
 			this.chatShh = sessionStorage.getItem('GPT_TOK');
+			this.commData.currentState$.next({
+				apiFound: true,
+			});
 		}
 	}
 	ngOnInit(): void {}
@@ -27,8 +29,22 @@ export class MainHomeComponent implements OnInit, OnDestroy {
 		});
 
 		dialogRef.afterClosed().subscribe((result: DialogData) => {
-			console.log('The dialog was closed', result);
-			this.chatShh = result.key;
+			if (
+				typeof result == 'undefined' ||
+				!result.key ||
+				result.key == 'null' ||
+				result.key == ''
+			) {
+				this.commData.currentState$.next({
+					apiFound: false,
+				});
+				this.openDialog();
+			} else {
+				sessionStorage.setItem('GPT_TOK', result.key);
+				this.commData.currentState$.next({
+					apiFound: true,
+				});
+			}
 		});
 	}
 	ngOnDestroy(): void {}

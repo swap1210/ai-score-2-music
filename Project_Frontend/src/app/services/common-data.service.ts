@@ -5,6 +5,10 @@ import { COMM_DATA } from '../../assets/db-data/common-val';
 import { CommDataModel } from '../model/comm.data.model';
 import { Theme } from '../model/theme';
 
+export interface CurrentState {
+	apiFound: boolean;
+}
+
 @Injectable({
 	providedIn: 'root',
 })
@@ -14,6 +18,11 @@ export class CommonDataService {
 	public themeState$: BehaviorSubject<Theme> = new BehaviorSubject<Theme>({
 		darkmode: false,
 	});
+
+	public currentState$: BehaviorSubject<CurrentState> =
+		new BehaviorSubject<CurrentState>({
+			apiFound: false,
+		});
 
 	getData(): CommDataModel {
 		return COMM_DATA;

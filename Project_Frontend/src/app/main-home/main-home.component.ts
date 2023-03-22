@@ -15,9 +15,7 @@ export class MainHomeComponent implements OnInit, OnDestroy {
 	chatShh: string;
 	constructor(public commData: CommonDataService, public dialog: MatDialog) {
 		this.chatShh = sessionStorage.getItem('GPT_TOK');
-		if (!this.chatShh || this.chatShh == 'null' || this.chatShh == '') {
-			this.openDialog();
-		} else {
+		if (!(!this.chatShh || this.chatShh == 'null' || this.chatShh == '')) {
 			this.chatShh = sessionStorage.getItem('GPT_TOK');
 			this.commData.currentState$.next({
 				apiFound: true,
@@ -28,6 +26,8 @@ export class MainHomeComponent implements OnInit, OnDestroy {
 			next: (val: CurrentState) => {
 				if (!val.apiFound) {
 					this.openDialog();
+				} else {
+					this.dialog.closeAll();
 				}
 			},
 		});

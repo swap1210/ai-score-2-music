@@ -1,9 +1,6 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
-import {
-	MatDialog,
-	MatDialogRef,
-	MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DialogText } from '../../model/comm.data.model';
 
 @Component({
 	selector: 'key-dialog',
@@ -13,14 +10,10 @@ import {
 export class KeyDialog {
 	constructor(
 		public dialogRef: MatDialogRef<KeyDialog>,
-		@Inject(MAT_DIALOG_DATA) public data: DialogData
+		@Inject(MAT_DIALOG_DATA) public data: DialogText
 	) {}
 
 	onNoClick(): void {
 		this.dialogRef.close();
 	}
-}
-
-export interface DialogData {
-	key: string;
 }

@@ -9,16 +9,23 @@ export const COMM_DATA: CommDataModel = {
 	home: {
 		title: 'How to create API Key:',
 		instruction: [
-			'Visit OpenAI’s official site via your preferred browser',
-			'Tap on “Log-In” and add your email',
-			'Click on the “View API Keys” icon in the top-right area of your screen',
+			"Visit OpenAI’s official site via your preferred browser. <a href='https://platform.openai.com/account/api-keys'  target='_blank'>https://platform.openai.com/account/api-keys</a>",
+			"You'll will be asked to log in order to proceed",
+			'Click on the API Keys” section in the left-panel area of the site',
 			'Select the “Create an API Key” icon to set your API Key',
-			'After this, your API Key will be generated. To use your Key you can simply copy the code and paste it on the spot that says enter API Key on OpenAI API.',
+			'After this, your API Key will be generated.',
+			'To use it just paste it in the dialog.',
 		],
 	},
 	footer: {
 		section1: '',
 		section2: '© Taalmaster 2023. All rights reserved.',
 		section3: 'Developed by Bhavitha, Nidhi, Teja & Swapnil',
+	},
+	apiKeyDialog: {
+		key: '',
+		title: 'Openai API key not found!',
+		content:
+			'Please enter your API key to continue.<br>Don\'t have a key generate one <a href="https://platform.openai.com/account/api-keys" target="_blank">here</a>',
 	},
 };

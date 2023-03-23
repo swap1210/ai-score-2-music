@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DialogText } from '../model/comm.data.model';
 import {
 	CommonDataService,
 	CurrentState,
 } from '../services/common-data.service';
-import { DialogData, KeyDialog } from './key-dialog/key-dialog.component';
+import { KeyDialog } from './key-dialog/key-dialog.component';
 
 @Component({
 	selector: 'app-main-home',
@@ -36,10 +37,10 @@ export class MainHomeComponent implements OnInit, OnDestroy {
 
 	openDialog(): void {
 		const dialogRef = this.dialog.open(KeyDialog, {
-			data: {},
+			data: this.commData.getData().apiKeyDialog,
 		});
 
-		dialogRef.afterClosed().subscribe((result: DialogData) => {
+		dialogRef.afterClosed().subscribe((result: DialogText) => {
 			if (
 				typeof result == 'undefined' ||
 				!result.key ||

@@ -2,6 +2,7 @@ export interface CommDataModel {
 	header: Header;
 	footer: Footer;
 	home: Home;
+	apiKeyDialog: DialogText;
 }
 
 export interface Header {
@@ -19,4 +20,10 @@ export interface Footer {
 export interface Home {
 	title: string;
 	instruction: string[];
+}
+
+export interface DialogText {
+	key: string;
+	title: string;
+	content: string;
 }

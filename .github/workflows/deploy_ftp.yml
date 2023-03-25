@@ -1,5 +1,7 @@
 name: Deploy website
-on: push
+"on":
+push:
+branches: -bhavitha-deployment-script
 jobs:
   web-deploy:
     name: Deploy
@@ -8,6 +10,6 @@ jobs:
       - name: Latest code
         uses: actions/checkout@v3
         with:
-          server: ftp://dcm.uhcl.edu/caps23g2
+          server: dcm.uhcl.edu/caps23g2
           username: sce\caps23g2
           password: Capstonegroup2

@@ -1,7 +1,8 @@
 name: Deploy website
 "on":
   push:
-  branches: - bhavitha-deployment-script
+    branches:
+      - bhavitha-deployment-script
 jobs:
   web-deploy:
     name: Deploy
@@ -11,6 +12,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           server: http://dcm.uhcl.edu
-          path : '/caps23g2'
+          path: "/caps23g2"
           username: sce\caps23g2
           password: Capstonegroup2

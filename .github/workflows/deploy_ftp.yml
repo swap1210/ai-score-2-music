@@ -6,7 +6,7 @@
 name: Deploy website on push
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: latest code
@@ -14,9 +14,9 @@ jobs:
 
       - name: Build Project
         run: |
-          ng build
+          npm install && ng build
 
-      - name: 📂 Sync files
+      - name: File
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server-dir: ftp://dcm.uhcl.edu/pages/

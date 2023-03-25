@@ -13,7 +13,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build Project
-        runs-on: ng build
+        run : |
+        npm i
+        ng build --base-href /caps23g2/taalmaster/
 
       - name: File
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

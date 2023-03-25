@@ -15,6 +15,7 @@ jobs:
       - name: Build Project
         run: |
           npm install -g @angular/cli
+          ng version
           ng build
 
       - name: File

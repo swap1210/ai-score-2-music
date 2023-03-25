@@ -1,5 +1,5 @@
 name: Deploy website
-on:
+"on":
   push:
   branches: bhavitha-deployment-script
 jobs:

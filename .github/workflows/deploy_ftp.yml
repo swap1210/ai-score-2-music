@@ -13,11 +13,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build Project
-        run : |
-        npm install -g @angular/cli
-        ng build
-
-      - name: File
+        run : npm i && ng run build
+        
+       - name: File
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server-dir: ftp://dcm.uhcl.edu/pages/

@@ -11,7 +11,6 @@ jobs:
       - name: Latest code
         uses: actions/checkout@v3
         with:
-          server: http://dcm.uhcl.edu
-          path: "/caps23g2"
-          username: sce\caps23g2
-          password: Capstonegroup2
+          ftp-server: ftp://dcm.uhcl.edu/caps23g2
+          ftp-username: sce\caps23g2
+          ftp-password: Capstonegroup2

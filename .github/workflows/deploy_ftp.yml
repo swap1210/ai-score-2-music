@@ -1,16 +1,25 @@
-name: Deploy website
 "on":
   push:
     branches:
       - bhavitha-deployment-script
+
+name: Deploy website on push
 jobs:
   web-deploy:
-    name: Deploy
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Latest code
+      - name: latest code
         uses: actions/checkout@v3
+
+      - name: Build Project
+        run: |
+          ng build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          ftp-server: ftp://dcm.uhcl.edu/caps23g2
-          ftp-username: sce\caps23g2
-          ftp-password: Capstonegroup2
+          server-dir: ftp://dcm.uhcl.edu/pages/
+          local-dir: ./ai-score-2-music/project_portfolio/dist/project_portfolio
+          username: sce\caps23g2
+          password: ${{ secrets.ftp_password }}

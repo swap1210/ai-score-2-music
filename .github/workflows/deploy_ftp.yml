@@ -14,7 +14,7 @@ jobs:
 
       - name: Build Project
         run: |
-          ng run build
+          ng build
 
       - name: File
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

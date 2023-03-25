@@ -15,7 +15,7 @@ jobs:
       - name: Build Project
         run : |
         npm i
-        ng build --base-href /caps23g2/taalmaster/
+        ng build
 
       - name: File
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

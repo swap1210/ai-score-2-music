@@ -14,11 +14,9 @@ jobs:
 
       - name: directory
         working-directory: ./project-portfolio
-
-      - name: Build Project
         run: npm i && ng build --base-href /caps23g2/
 
-      - name: File
+      - name: FTP deployment
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp://dcm.uhcl.edu

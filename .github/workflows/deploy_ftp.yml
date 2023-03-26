@@ -20,7 +20,7 @@ jobs:
           
       - name: Build
         working-directory: project_portfolio
-        run: npm ci && npm build
+        run: npm ci && npm run build
 
       - name: FTP deployment
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

@@ -17,7 +17,8 @@ export class LoadingComponent implements OnInit {
 		this.loadingService.loading$.subscribe({
 			next: (stillLoading) => {
 				if (stillLoading) {
-					this.localInterval = setInterval(() => {
+					self.timed = 0;
+					self.localInterval = setInterval(() => {
 						self.timed++;
 					}, 1000);
 				} else {

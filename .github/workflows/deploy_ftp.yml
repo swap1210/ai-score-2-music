@@ -27,6 +27,6 @@ jobs:
         with:
           server: ftp://dcm.uhcl.edu
           server-dir: ftp://dcm.uhcl.edu/caps23g2/pages/
-          local-dir: ./ai-score-2-music/project_portfolio/dist/project_portfolio/
+          local-dir: ./project_portfolio/dist/project_portfolio/
           username: sce\caps23g2
           password: ${{ secrets.ftp_password }}

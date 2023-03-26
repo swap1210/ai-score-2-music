@@ -17,9 +17,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '12.x'
-      - run: cd project_portfolio
-      - run: npm ci
-      - run: ng build --base-href /caps23g2/
+          
+      - name: Build
+        working-directory: project_portfolio
+        run: npm ci && ng build --base-href /caps23g2/
 
       - name: FTP deployment
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

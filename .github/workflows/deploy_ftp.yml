@@ -20,7 +20,7 @@ jobs:
           
       - name: Build
         working-directory: project_portfolio
-        run: npm ci && ng build --base-href /caps23g2/
+        run: npm ci && npm run build --base-href /caps23g2/
 
       - name: FTP deployment
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

@@ -19,6 +19,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server-dir: ftp://dcm.uhcl.edu/pages/
-          local-dir: ./ai-score-2-music/project_portfolio/dist/project_portfolio
+          local-dir: ./ai-score-2-music/project_portfolio/dist/project_portfolio/
           username: sce\caps23g2
           password: ${{ secrets.ftp_password }}

@@ -6,18 +6,22 @@
 name: Deploy website on push
 jobs:
   web-deploy:
-    name: Deploy
+    name: Capstone project Deploy
     runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
     steps:
       - name: latest code
         uses: actions/checkout@v3
-
-      - name: directory
-        run: pwd
-        working-directory: project-portfolio
-        
-      - name: Build
-        run: npm i && ng build --base-href /caps23g2/
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+#       - run: cd project_portfolio
+      - run: npm ci
+      - run: ng build --base-href /caps23g2/
 
       - name: FTP deployment
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

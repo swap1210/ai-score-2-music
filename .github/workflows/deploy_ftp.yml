@@ -13,7 +13,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: directory
+        run: pwd
         working-directory: project-portfolio
+        
+      - name: Build
         run: npm i && ng build --base-href /caps23g2/
 
       - name: FTP deployment

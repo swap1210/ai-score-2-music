@@ -12,11 +12,6 @@ jobs:
     steps:
       - name: latest code
         uses: actions/checkout@v3
-        
-#       - name: Start Node env
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: '12.x'
           
       - name: Build
         working-directory: project_portfolio
@@ -25,7 +20,7 @@ jobs:
       - name: FTP deployment
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp://dcm.uhcl.edu
+          server: dcm.uhcl.edu
           server-dir: caps23g2/pages/
           local-dir: ./project_portfolio/dist/
           username: sce\caps23g2

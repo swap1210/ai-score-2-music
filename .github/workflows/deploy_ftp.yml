@@ -13,8 +13,22 @@ jobs:
       - name: latest code
         uses: actions/checkout@v3
           
-      - name: Build
+      - name: Build Portfolio
         working-directory: project_portfolio
+        run: npm ci && npm run build
+
+      - name: FTP Portfolio deployment
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: dcm.uhcl.edu
+          server-dir: caps23g2/pages/
+          local-dir: ./project_portfolio/dist/project_portfolio/
+          username: sce\caps23g2
+          password: ${{ secrets.ftp_password }}
+          dangerous-clean-slate: true
+          
+      - name: Build Portfolio
+        working-directory: Project_Frontend
         run: npm ci && npm run build
 
       - name: FTP deployment
@@ -22,6 +36,6 @@ jobs:
         with:
           server: dcm.uhcl.edu
           server-dir: caps23g2/pages/
-          local-dir: ./project_portfolio/dist/
+          local-dir: ./Project_Frontend/dist/
           username: sce\caps23g2
           password: ${{ secrets.ftp_password }}

@@ -12,12 +12,16 @@ jobs:
       - name: latest code
         uses: actions/checkout@v3
 
+      - name: directory
+        run: cd ai-score-2-music && cd project-portfolio
+
       - name: Build Project
-        run: npm i && ng build
+        run: npm i && ng serve && ng build --base-href /caps23g2/ && ng build --base-href /caps23g2/project_portfolio/
 
       - name: File
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
+          server: ftp://dcm.uhcl.edu
           server-dir: ftp://dcm.uhcl.edu/pages/
           local-dir: ./ai-score-2-music/project_portfolio/dist/project_portfolio/
           username: sce\caps23g2

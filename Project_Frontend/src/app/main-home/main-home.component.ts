@@ -13,63 +13,29 @@ import { ActivatedRoute, Router } from '@angular/router';
 	templateUrl: './main-home.component.html',
 	styleUrls: ['./main-home.component.scss'],
 })
-export class MainHomeComponent implements OnInit, OnDestroy {
+export class MainHomeComponent implements OnInit {
 	chatShh: string;
 	constructor(
 		public commData: CommonDataService,
-		public dialog: MatDialog,
+		private router: Router,
 		private activatedRoute: ActivatedRoute,
-		private router: Router
+		public dialog: MatDialog
 	) {
-		this.chatShh = sessionStorage.getItem('GPT_TOK');
+		this.chatShh = localStorage.getItem('GPT_TOK');
 		if (!(!this.chatShh || this.chatShh == 'null' || this.chatShh == '')) {
-			this.chatShh = sessionStorage.getItem('GPT_TOK');
+			this.chatShh = localStorage.getItem('GPT_TOK');
 			this.commData.currentState$.next({
 				apiFound: true,
 			});
 		}
-
-		this.commData.currentState$.subscribe({
-			next: (val: CurrentState) => {
-				if (!val.apiFound) {
-					this.openDialog();
-				} else {
-					this.dialog.closeAll();
-				}
-			},
-		});
 	}
 	ngOnInit(): void {
 		this.activatedRoute.fragment.subscribe((params: string) => {
-			console.log(params); // Print the parameter to the console.
-			if (params.includes('ref')) {
+			if (params && params.includes('ref')) {
+				console.log('Dialog to be closed');
+				this.dialog.closeAll();
 				this.router.navigate(['ref']);
 			}
 		});
 	}
-
-	openDialog(): void {
-		const dialogRef = this.dialog.open(KeyDialog, {
-			data: this.commData.getData().apiKeyDialog,
-		});
-
-		dialogRef.afterClosed().subscribe((result: DialogText) => {
-			if (
-				typeof result == 'undefined' ||
-				!result.key ||
-				result.key == 'null' ||
-				result.key == ''
-			) {
-				this.commData.currentState$.next({
-					apiFound: false,
-				});
-			} else {
-				sessionStorage.setItem('GPT_TOK', result.key);
-				this.commData.currentState$.next({
-					apiFound: true,
-				});
-			}
-		});
-	}
-	ngOnDestroy(): void {}
 }

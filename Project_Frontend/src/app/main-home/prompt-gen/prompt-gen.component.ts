@@ -67,7 +67,7 @@ export class PromptGenComponent implements OnInit {
 				this.onFormChange();
 			},
 		});
-		this.chatShh = sessionStorage.getItem('GPT_TOK');
+		this.chatShh = localStorage.getItem('GPT_TOK');
 	}
 
 	callGPT = () => {

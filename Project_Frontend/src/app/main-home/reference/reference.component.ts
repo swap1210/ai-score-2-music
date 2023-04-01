@@ -14,9 +14,4 @@ export class ReferenceComponent {
 	}
 
 	ngOnInit(): void {}
-
-	clearKey(): void {
-		sessionStorage.setItem('GPT_TOK', '');
-		this.commData.currentState$.next({ apiFound: false });
-	}
 }

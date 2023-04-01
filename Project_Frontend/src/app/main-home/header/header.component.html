@@ -26,6 +26,7 @@
 			class="no-mob"
 			[routerLink]="'/editor'"
 			routerLinkActive="active"
+			*ngIf="(commData.currentState$ | async).apiFound"
 		>
 			Music Editor
 		</button>

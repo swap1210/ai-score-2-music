@@ -18,8 +18,7 @@ export class MainHomeComponent implements OnInit {
 	constructor(
 		public commData: CommonDataService,
 		private router: Router,
-		private activatedRoute: ActivatedRoute,
-		public dialog: MatDialog
+		private activatedRoute: ActivatedRoute
 	) {
 		this.chatShh = localStorage.getItem('GPT_TOK');
 		if (!(!this.chatShh || this.chatShh == 'null' || this.chatShh == '')) {
@@ -33,7 +32,6 @@ export class MainHomeComponent implements OnInit {
 		this.activatedRoute.fragment.subscribe((params: string) => {
 			if (params && params.includes('ref')) {
 				console.log('Dialog to be closed');
-				this.dialog.closeAll();
 				this.router.navigate(['ref']);
 			}
 		});

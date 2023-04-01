@@ -1,25 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { DialogText, Home } from '../../model/comm.data.model';
 import {
 	CommonDataService,
 	CurrentState,
 } from '../../services/common-data.service';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
 import { KeyDialog } from '../key-dialog/key-dialog.component';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
 	selector: 'app-landing',
 	templateUrl: './landing.component.html',
 	styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit, OnDestroy {
 	public dat: Home;
+	destroy$: Subject<boolean> = new Subject<boolean>();
 	constructor(public commData: CommonDataService, public dialog: MatDialog) {
 		this.dat = commData.getData().home;
 	}
+	ngOnDestroy(): void {
+		console.log('Landing killed');
+		this.dialog.closeAll();
+		this.destroy$.next(true);
+		this.destroy$.complete();
+	}
 	ngOnInit(): void {
-		this.commData.currentState$.subscribe({
+		this.commData.currentState$.pipe(takeUntil(this.destroy$)).subscribe({
 			next: (val: CurrentState) => {
 				if (!val.apiFound) {
 					this.openDialog();
@@ -32,6 +40,7 @@ export class LandingComponent implements OnInit {
 	}
 
 	openDialog(): void {
+		console.log('Opened dialog');
 		const dialogRef = this.dialog.open(KeyDialog, {
 			data: this.commData.getData().apiKeyDialog,
 		});

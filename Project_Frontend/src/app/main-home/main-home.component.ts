@@ -6,6 +6,7 @@ import {
 	CurrentState,
 } from '../services/common-data.service';
 import { KeyDialog } from './key-dialog/key-dialog.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
 	selector: 'app-main-home',
@@ -14,7 +15,12 @@ import { KeyDialog } from './key-dialog/key-dialog.component';
 })
 export class MainHomeComponent implements OnInit, OnDestroy {
 	chatShh: string;
-	constructor(public commData: CommonDataService, public dialog: MatDialog) {
+	constructor(
+		public commData: CommonDataService,
+		public dialog: MatDialog,
+		private activatedRoute: ActivatedRoute,
+		private router: Router
+	) {
 		this.chatShh = sessionStorage.getItem('GPT_TOK');
 		if (!(!this.chatShh || this.chatShh == 'null' || this.chatShh == '')) {
 			this.chatShh = sessionStorage.getItem('GPT_TOK');
@@ -33,7 +39,14 @@ export class MainHomeComponent implements OnInit, OnDestroy {
 			},
 		});
 	}
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.activatedRoute.fragment.subscribe((params: string) => {
+			console.log(params); // Print the parameter to the console.
+			if (params.includes('ref')) {
+				this.router.navigate(['ref']);
+			}
+		});
+	}
 
 	openDialog(): void {
 		const dialogRef = this.dialog.open(KeyDialog, {

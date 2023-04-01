@@ -4,6 +4,7 @@ import { FlatioEditorComponent } from './flatio-editor/flatio-editor.component';
 import { LandingComponent } from './landing/landing.component';
 import { MainHomeComponent } from './main-home.component';
 import { PromptGenComponent } from './prompt-gen/prompt-gen.component';
+import { ReferenceComponent } from './reference/reference.component';
 
 const routes: Routes = [
 	{
@@ -21,6 +22,10 @@ const routes: Routes = [
 			{
 				path: 'editor',
 				component: FlatioEditorComponent,
+			},
+			{
+				path: 'ref',
+				component: ReferenceComponent,
 			},
 		],
 	},

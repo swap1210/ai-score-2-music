@@ -32,3 +32,5 @@ To deploy project demo page run build command like this
 ```
  ng build --base-href /caps23g2/taalmaster/
 ```
+
+Paste reference folder inside taalmaster folder

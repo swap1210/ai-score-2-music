@@ -3,8 +3,17 @@ export interface CommDataModel {
 	footer: Footer;
 	home: Home;
 	apiKeyDialog: DialogText;
+	reference: Reference;
 }
 
+export interface Reference {
+	title: string;
+	list: Linked[];
+}
+export interface Linked {
+	head: string;
+	link: string;
+}
 export interface Header {
 	appIconLink: string;
 	appDesc: string;

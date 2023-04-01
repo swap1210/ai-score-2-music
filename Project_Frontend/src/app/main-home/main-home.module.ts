@@ -10,6 +10,7 @@ import { HomeMaterialModule } from './home-material/home-material.module';
 import { EditorComponent } from './prompt-gen/editor/editor.component';
 import { KeyDialog } from './key-dialog/key-dialog.component';
 import { LandingComponent } from './landing/landing.component';
+import { ReferenceComponent } from './reference/reference.component';
 
 @NgModule({
 	declarations: [
@@ -20,6 +21,7 @@ import { LandingComponent } from './landing/landing.component';
 		EditorComponent,
 		KeyDialog,
 		LandingComponent,
+		ReferenceComponent,
 	],
 	imports: [CommonModule, HomeMaterialModule, MainHomeRoutingModule],
 })

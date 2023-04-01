@@ -1,0 +1,12 @@
+<div class="landing">
+	<h1 [innerText]="dat.title"></h1>
+	<ul>
+		<ng-container *ngFor="let str of dat.list">
+			<li
+				[innerHTML]="
+					str.head + ' <a href=\'' + str.link + '\'>' + str.link + '</a>'
+				"
+			></li
+		></ng-container>
+	</ul>
+</div>

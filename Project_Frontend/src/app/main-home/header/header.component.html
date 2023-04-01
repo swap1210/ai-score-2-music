@@ -4,7 +4,7 @@
 		<button
 			mat-button
 			tabindex="0"
-			[routerLink]="'/home'"
+			[routerLink]="'/'"
 			routerLinkActive="active"
 		>
 			<div class="app-button">
@@ -15,7 +15,7 @@
 		<button
 			mat-button
 			class="no-mob"
-			[routerLink]="'/home/music-gen'"
+			[routerLink]="'/music-gen'"
 			routerLinkActive="active"
 			*ngIf="(commData.currentState$ | async).apiFound"
 		>
@@ -24,7 +24,7 @@
 		<button
 			mat-button
 			class="no-mob"
-			[routerLink]="'/home/editor'"
+			[routerLink]="'/editor'"
 			routerLinkActive="active"
 		>
 			Music Editor
@@ -48,17 +48,13 @@
 		<mat-menu #menu="matMenu">
 			<button
 				mat-menu-item
-				[routerLink]="'/home/music-gen'"
+				[routerLink]="'/music-gen'"
 				routerLinkActive="active"
 				*ngIf="(commData.currentState$ | async).apiFound"
 			>
 				Prompt Generator
 			</button>
-			<button
-				mat-menu-item
-				[routerLink]="'/home/editor'"
-				routerLinkActive="active"
-			>
+			<button mat-menu-item [routerLink]="'/editor'" routerLinkActive="active">
 				Music Editor
 			</button>
 		</mat-menu>

@@ -17,6 +17,48 @@ export const COMM_DATA: CommDataModel = {
 			'To use it just paste it in the dialog.',
 		],
 	},
+	reference: {
+		title: 'References',
+		list: [
+			{
+				head: 'Music Theory',
+				link: 'https://www.musictheory.net/lessons',
+			},
+			{ head: 'Github dcoumentation', link: 'https://docs.github.com/en' },
+			{
+				head: 'abc notation baiscs',
+				link: 'https://abcnotation.com/',
+			},
+			{
+				head: 'abc.js documentation',
+				link: 'https://www.abcjs.net/#which',
+			},
+			{
+				head: 'Angular documentation',
+				link: 'https://angular.io/docs',
+			},
+			{
+				head: 'Angular Material documentation',
+				link: 'https://material.angular.io/',
+			},
+			{
+				head: 'RxJS documentation',
+				link: 'https://rxjs.dev/api',
+			},
+			{
+				head: 'OpenAI documentation',
+				link: 'https://platform.openai.com/docs/api-reference/',
+			},
+			{
+				head: 'Tone.js documentation',
+				link: 'https://tonejs.github.io/',
+			},
+			{
+				head: 'Flat.io API documentation',
+				link: 'https://flat.io/developers/api/reference/',
+			},
+		],
+	},
 	footer: {
 		section1: '',
 		section2: '© Taalmaster 2023. All rights reserved.',

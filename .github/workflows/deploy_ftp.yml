@@ -1,1 +1,40 @@
+"on":
+  push:
+    branches:
+      - bhavitha-deployment-script
 
+name: Deploy website on push
+jobs:
+  web-deploy:
+    name: Capstone project Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: latest code
+        uses: actions/checkout@v3
+
+      - name: Build Portfolio
+        working-directory: project_portfolio
+        run: npm ci && npm run build
+
+      - name: FTP Portfolio deployment
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: dcm.uhcl.edu
+          server-dir: caps23g2/pages/
+          local-dir: ./project_portfolio/dist/project_portfolio/
+          username: sce\caps23g2
+          password: ${{ secrets.ftp_password }}
+
+      - name: Build Portfolio
+        working-directory: Project_Frontend
+        run: npm ci && npm run build
+
+      - name: FTP deployment
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: dcm.uhcl.edu
+          server-dir: caps23g2/pages/taalmaster/
+          local-dir: ./Project_Frontend/dist/taalmaster/
+          username: sce\caps23g2
+          password: ${{ secrets.ftp_password }}

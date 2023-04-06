@@ -65,7 +65,8 @@ export const COMMVAL: CommDataModel = {
   footer: {
     section1: '',
     section2: '© Taalmaster 2023. All rights reserved.',
-    section3: 'Developed by Bhavitha, Nidhi, Teja & Swapnil',
+    section3:
+      'Developed by Bhavitha Potlapally, Nidhi Gol, Ratna Teja Nerusu & Swapnil Patel',
   },
   milestones: [
     {

@@ -9,12 +9,12 @@
 		>
 			<div class="app-button">
 				<span class="appName" [innerText]="header.appName"></span>
-				<span class="desc wide-only-pc" [innerText]="header.appDesc"></span>
+				<span class="appDesc wide-only-pc" [innerText]="header.appDesc"></span>
 			</div>
 		</button>
 		<button
 			mat-button
-			class="no-mob"
+			class="no-mob route-btn"
 			[routerLink]="'/music-gen'"
 			routerLinkActive="active"
 			*ngIf="(commData.currentState$ | async).apiFound"
@@ -23,7 +23,7 @@
 		</button>
 		<button
 			mat-button
-			class="no-mob"
+			class="no-mob route-btn"
 			[routerLink]="'/editor'"
 			routerLinkActive="active"
 			*ngIf="(commData.currentState$ | async).apiFound"

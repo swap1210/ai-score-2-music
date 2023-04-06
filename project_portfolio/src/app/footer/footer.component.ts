@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonDataService } from 'src/service/common-data.service';
+import { Footer } from 'src/service/model/comm.data.model';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,9 @@ import { CommonDataService } from 'src/service/common-data.service';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-  constructor(public commData: CommonDataService) {}
+  @Input()
+  footerData!: Footer;
+  constructor() {}
 
   ngOnInit(): void {}
 }

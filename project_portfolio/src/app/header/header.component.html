@@ -13,10 +13,10 @@
     </div>
   </button>
   <span class="spacer"></span>
-  <button mat-button class="only-pc" [routerLink]="'/'">Home</button>
+  <button mat-button class="route-btn only-pc" [routerLink]="'/'">Home</button>
   <button
     mat-button
-    class="only-pc"
+    class="route-btn only-pc"
     [routerLink]="'/mentor'"
     routerLinkActive="active-tab-look"
   >
@@ -24,7 +24,7 @@
   </button>
   <button
     mat-button
-    class="only-pc"
+    class="route-btn only-pc"
     [routerLink]="'/team'"
     routerLinkActive="active-tab-look"
   >
@@ -32,7 +32,7 @@
   </button>
   <button
     mat-button
-    class="only-pc"
+    class="route-btn only-pc"
     [routerLink]="'/milestones'"
     routerLinkActive="active-tab-look"
   >
@@ -42,7 +42,7 @@
     mat-icon-button
     (click)="switchTheme()"
     aria-label="swtch theme between dark and light"
-    class="only-pc"
+    class="route-btn only-pc"
   >
     <mat-icon
       [innerText]="theme.darkmode ? 'dark_mode' : 'brightness_5'"

@@ -12,17 +12,19 @@
   flex: 1 1 auto;
 }
 .header-app-icon {
-  height: 3em;
+  height: 5em;
   border-radius: 0.5em;
   margin-top: 0.3em;
   margin-right: 0.3em;
+  z-index: 1;
 }
 
 .appName {
-  font-size: 2em;
+  font-size: 3.5em;
 }
-.appDesc {
-  font-size: 0.8em;
+.desc {
+  margin-top: 0.5em;
+  font-size: 1.5em;
 }
 .linkLogo {
   fill: mat.get-contrast-color-from-palette($profile-ang-primary, 500);
@@ -32,11 +34,23 @@
 }
 
 .header-row {
-  height: 4em;
+  height: 6em;
   column-gap: 1em;
-  background-image: url("../../assets/score-ribbon.png");
+}
+
+.header-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../assets/score-ribbon-top.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  opacity: 0.7;
+  height: 6em;
+  background-position: center;
+  z-index: 0;
 }
 
 .only-pc {
@@ -62,11 +76,11 @@
     display: none;
   }
 }
-.desc {
-  font-size: small;
-}
 .app-button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.route-btn {
+  font-size: 1.5em;
 }

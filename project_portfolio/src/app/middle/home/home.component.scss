@@ -1,22 +1,42 @@
 @import "../../../theme/vars.scss";
 
 .home-main {
-  position: relative;
-  display: flex;
-  column-gap: 2em;
-  row-gap: 2em;
-  margin: 1dvw 0;
-  justify-content: center;
-  @media screen and (max-width: ($mobile-width+300)) {
-    flex-wrap: wrap;
+  // position: relative;
+  // display: flex;
+  // column-gap: 2em;
+  // row-gap: 2em;
+  // margin: 1dvw 0;
+  // justify-content: center;
+  // @media screen and (max-width: ($mobile-width+300)) {
+  //   flex-wrap: wrap;
+  // }
+  display: grid;
+  grid-template-areas: "home-img para" "launch-btn launch-btn";
+
+  @media screen and (max-width: ($mobile-width+500)) {
+    grid-template-areas: "home-img" "para" "launch-btn";
   }
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  justify-items: center;
+  align-items: center;
+}
+
+.item1 {
+  grid-area: home-img;
+}
+.item2 {
+  grid-area: para;
+}
+.item3 {
+  grid-area: launch-btn;
 }
 
 .home-image {
-  flex: 1;
+  // flex: 1;
   max-height: 30em;
   object-fit: scale-down;
-  @media screen and (max-width: ($mobile-width+300)) {
+  @media screen and (max-width: ($mobile-width+500)) {
     max-height: 15em;
   }
   filter: blur(0.3em);
@@ -25,8 +45,8 @@
   animation: blurIn 3s;
 }
 .para {
-  flex: 1;
-  max-width: 30em;
+  // flex: 1;
+  max-width: 35em;
   margin-left: 0.5dvw;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.4);
@@ -43,7 +63,7 @@
 }
 
 .block {
-  width: 70dvw;
+  width: -webkit-fill-available;
   height: 4em;
   margin: 1em 1em;
   padding-top: 1em;

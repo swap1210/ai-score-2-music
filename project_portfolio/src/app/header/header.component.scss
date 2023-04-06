@@ -54,6 +54,11 @@
     display: none;
   }
 }
+.only-s-mobile {
+  @media only screen and (max-width: ($s-mobile-width)) {
+    display: none;
+  }
+}
 .desc {
   font-size: small;
 }

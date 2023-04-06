@@ -1,5 +1,5 @@
-<div class="milestone-parent">
-  <div class="mat-h1 title">Milestones:</div>
+<div class="main">
+  <h1>Milestones</h1>
   <table
     mat-table
     [dataSource]="(commData.milestones$ | async)!"
@@ -48,10 +48,6 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-  <button
-    mat-raised-button
-    color="primary"
-    class="block mat-elevation-z4"
-  ></button>
-  <div class="mat-h1">Project Milestones - Spring, 2023</div>
+  <!-- <div class="warnColorBG block mat-elevation-z4"></div> -->
+  <h1>Project Milestones - Spring 2023</h1>
 </div>

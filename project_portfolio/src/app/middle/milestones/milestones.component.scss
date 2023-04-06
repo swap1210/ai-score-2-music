@@ -1,5 +1,12 @@
+@import "../../../theme/vars.scss";
 .main {
   display: flex;
   row-gap: 2em;
   flex-direction: column;
+}
+table {
+  width: 160dvh;
+  @media screen and (max-width: ($mobile-width+630)) {
+    width: 100%;
+  }
 }

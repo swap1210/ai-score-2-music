@@ -6,7 +6,7 @@
   }"
 >
   <header class="section">
-    <app-header></app-header>
+    <app-header [theme]="(commData.themeState$ | async)!"></app-header>
   </header>
 
   <main class="section my-center some-margin">

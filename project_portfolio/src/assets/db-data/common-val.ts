@@ -56,7 +56,7 @@ export const COMMVAL: CommDataModel = {
     {
       imgSrc: './assets/Swapnil_Webv2.png',
       title: 'Swapnil Patel',
-      bio: 'As a passionate and detail-oriented individual, I take pride in producing clean, efficient, and maintainable code. Ping me if you have an awesome project idea and you need help executing it.',
+      bio: 'As a passionate and detail-oriented individual, I take pride in producing clean, efficient, and maintainable code. Feel free to ping me if you have an awesome project idea and you need guidance executing it.',
       linkedin: 'https://www.linkedin.com/in/swap1210/',
       github: 'https://github.com/swap1210',
       email: 'p.swap1210@gmail.com',

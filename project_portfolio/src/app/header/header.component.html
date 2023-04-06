@@ -45,9 +45,7 @@
     class="only-pc"
   >
     <mat-icon
-      [innerText]="
-        (commData.themeState$ | async)!.darkmode ? 'dark_mode' : 'brightness_5'
-      "
+      [innerText]="theme.darkmode ? 'dark_mode' : 'brightness_5'"
     ></mat-icon>
   </button>
   <button class="only-mobile" mat-icon-button [matMenuTriggerFor]="menu">
@@ -84,11 +82,7 @@
       aria-label="swtch theme between dark and light"
     >
       <mat-icon
-        [innerText]="
-          (commData.themeState$ | async)!.darkmode
-            ? 'dark_mode'
-            : 'brightness_5'
-        "
+        [innerText]="theme.darkmode ? 'dark_mode' : 'brightness_5'"
       ></mat-icon>
     </button>
   </mat-menu>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonDataService } from 'src/service/common-data.service';
+import { Theme } from 'src/service/model/theme';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,8 @@ import { CommonDataService } from 'src/service/common-data.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input()
+  theme!: Theme;
   constructor(public commData: CommonDataService) {}
 
   ngOnInit(): void {}

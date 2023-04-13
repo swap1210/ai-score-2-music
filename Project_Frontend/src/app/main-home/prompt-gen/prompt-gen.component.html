@@ -71,7 +71,7 @@
 					</button>
 				</form>
 			</ng-container>
-			<!-- <div
+			<div
 				class="prompt-row prompt"
 				*ngIf="narrativeData != ''"
 				[cdkCopyToClipboard]="narrativeData"
@@ -86,11 +86,11 @@
 					matTooltip="Click to copy the prompt"
 					fontIcon="file_copy"
 				></mat-icon>
-			</div> -->
+			</div>
 		</mat-card-content>
 	</mat-card>
 	<app-editor
 		[newScore]="currentScore$"
-		[ngStyle]="{ display: (currentScore$ | async) ? 'block' : 'none' }"
+		[ngStyle]="{ display: narrativeData != '' ? 'block' : 'none' }"
 	></app-editor>
 </div>

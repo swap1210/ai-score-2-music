@@ -1,10 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import {
-	FormBuilder,
-	FormControl,
-	FormGroup,
-	Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { FilterModel, OptionModel } from '../../model/filter.model';
 import { OptionsService } from '../../services/options-service';
@@ -13,6 +8,8 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { GptService } from '../../services/gpt.service';
 import { LoadingService } from '../../loading/loading.service';
 import { Subject } from 'rxjs';
+import { CommonDataService } from '../../services/common-data.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-prompt-gen',
@@ -39,9 +36,11 @@ export class PromptGenComponent implements OnInit {
 
 	constructor(
 		private fb: FormBuilder,
+		public commData: CommonDataService,
 		public optionsService: OptionsService,
 		public gptService: GptService,
-		private ls: LoadingService
+		private ls: LoadingService,
+		private router: Router
 	) {
 		this.promptForm = this.fb.group({
 			dynamics: [null, []],
@@ -50,6 +49,7 @@ export class PromptGenComponent implements OnInit {
 			keySignature: [null, []],
 			mode: [null, []],
 			generalMusicStyle: [null, []],
+			trackComplexity: [null, []],
 			specificMusicStyle: [null, []],
 			instrumentCtrl: [null, []],
 			instrumentAutocompleteCtrl: [[], []],
@@ -77,6 +77,12 @@ export class PromptGenComponent implements OnInit {
 				console.log(resScore);
 				this.currentScore$.next(resScore);
 			},
+			error: (err) => {
+				localStorage.setItem('GPT_TOK', '');
+				this.commData.currentState$.next({ apiFound: false });
+				this.ls.loadingOff();
+				this.router.navigate(['/']);
+			},
 			complete: () => {
 				this.ls.loadingOff();
 			},
@@ -89,6 +95,7 @@ export class PromptGenComponent implements OnInit {
 		let count = Object.keys(this.promptForm.getRawValue()).length;
 		Object.keys(this.promptForm.getRawValue()).forEach((key: string) => {
 			if (
+				key != 'trackComplexity' &&
 				this.promptForm.get(key).value &&
 				this.filters.filter((val) => val.controlName == key)[0]
 			) {
@@ -97,6 +104,13 @@ export class PromptGenComponent implements OnInit {
 					this.filters.filter((val) => val.controlName == key)[0].label +
 					' as ' +
 					this.promptForm.get(key).value;
+			} else if (
+				key == 'trackComplexity' &&
+				this.promptForm.get(key).value &&
+				this.filters.filter((val) => val.controlName == key)[0]
+			) {
+				this.narrativeData +=
+					' and make notes ' + this.promptForm.get(key).value;
 			} else {
 				count--;
 			}

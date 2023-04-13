@@ -247,4 +247,22 @@ export const FILTER_LABEL = [
 			},
 		],
 	},
+	{
+		controlName: 'trackComplexity',
+		label: 'Choose Track Complexity',
+		option: [
+			{
+				value: 'a little complex',
+				label: 'simple',
+			},
+			{
+				value: 'repeating',
+				label: 'medium',
+			},
+			{
+				value: 'more complex and none repeating',
+				label: 'complex',
+			},
+		],
+	},
 ];

@@ -197,6 +197,17 @@ export class FlatioEditorComponent implements OnInit {
     });
   }
 
+  async addInstrumentsToExistingScore() {
+    var obj = this;
+
+    this.instruments.forEach(async (c) => {
+      await this.editor.call("addPartFromTemplate", {
+        groupName: c.group,
+        instrumentName: c.instrument,
+      });
+    });
+  }
+
   exportFile(buffer, mimeType, ext) {
     var blobUrl = window.URL.createObjectURL(
       new Blob([buffer], {

@@ -72,6 +72,13 @@
   <mat-card class="editor-card" [hidden]="!scoreLoaded">
     <mat-card-content>
       <div id="embed-container"></div>
+      <button
+        *ngIf="editor"
+        mat-raised-button
+        (click)="addInstrumentsToExistingScore()"
+      >
+        Add All Instruments
+      </button>
       <button *ngIf="editor" mat-raised-button (click)="saveChanges()">
         Save Changes
       </button>

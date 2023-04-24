@@ -60,7 +60,7 @@ export class FlatioEditorComponent implements OnInit {
   }
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
-    if (file.type === "audio/midi") {
+    if (file.type === "audio/midi" || file.type === "audio/mid") {
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = () => {
@@ -168,7 +168,7 @@ export class FlatioEditorComponent implements OnInit {
     this.scoreLoaded = true;
     var container = document.getElementById("embed-container");
     container.style.height = "500px";
-    var embed = new Flat.Embed(container, {
+    this.editor = new Flat.Embed(container, {
       score: scoreId,
       embedParams: {
         appId: "63d202f3f3f8bdabcd8833e1",

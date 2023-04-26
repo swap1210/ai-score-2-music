@@ -7,7 +7,11 @@
 					[formGroup]="promptForm"
 					(ngInit)="formRegister()"
 				>
-					<mat-form-field appearance="fill" *ngFor="let filter of filters">
+					<mat-form-field
+						[ngClass]="{ 'two-col': filter.controlName == 'trackComplexity' }"
+						appearance="fill"
+						*ngFor="let filter of filters"
+					>
 						<mat-label [innerHTML]="filter.label"></mat-label>
 						<mat-select [formControl]="promptForm.controls[filter.controlName]">
 							<mat-option [value]="null">--none--</mat-option>
@@ -19,7 +23,7 @@
 						</mat-select>
 					</mat-form-field>
 
-					<mat-form-field class="two-col" appearance="fill">
+					<mat-form-field class="two-col" appearance="fill" *ngIf="false">
 						<mat-label>Add Instruments</mat-label>
 						<mat-chip-grid #chipGrid aria-label="Instruments selection">
 							<mat-chip-row
@@ -89,7 +93,7 @@
 			</div>
 		</mat-card-content>
 	</mat-card>
-	<mat-card>
+	<mat-card *ngIf="!(currentScore$ | async)">
 		<mat-card-content>
 			<ul class="hint">
 				<li *ngFor="let fv of commData.getData().fieldHint">

@@ -21,7 +21,7 @@ export const COMM_DATA: CommDataModel = {
 		{
 			feature: 'Dynamics',
 			value:
-				'variation in volume, intensity and expression ( how soft or loud)',
+				'Variation in volume, intensity and expression ( how soft or loud)',
 		},
 		{
 			feature: 'Tempo',
@@ -29,15 +29,15 @@ export const COMM_DATA: CommDataModel = {
 		},
 		{
 			feature: 'Time signature',
-			value: 'number of beats per note.',
+			value: 'Number of beats per note.',
 		},
 		{
 			feature: 'Key signatures',
-			value: 'what scale the music is built on',
+			value: 'What scale the music is built on',
 		},
 		{
 			feature: 'Music modes',
-			value: 'derived from major and minor scales for distinct musical mood',
+			value: 'Derived from major and minor scales for distinct musical mood',
 		},
 	],
 	reference: {

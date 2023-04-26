@@ -7,6 +7,9 @@ form.prompt-gen {
 
 .home-panel {
 	margin: 0 auto;
+	row-gap: 2em;
+	display: flex;
+	flex-direction: column;
 }
 .prompt {
 	cursor: grab;
@@ -25,4 +28,14 @@ form.prompt-gen {
 }
 .hid {
 	display: none;
+}
+
+ul.hint {
+	list-style-type: none;
+}
+li:not(:last-child) {
+	margin-bottom: 2em;
+}
+.highlight {
+	font-weight: 900;
 }

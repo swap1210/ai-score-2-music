@@ -17,6 +17,29 @@ export const COMM_DATA: CommDataModel = {
 			'To use it just paste it in the dialog.',
 		],
 	},
+	fieldHint: [
+		{
+			feature: 'Dynamics',
+			value:
+				'variation in volume, intensity and expression ( how soft or loud)',
+		},
+		{
+			feature: 'Tempo',
+			value: 'Speed of the music nodes ',
+		},
+		{
+			feature: 'Time signature',
+			value: 'number of beats per note.',
+		},
+		{
+			feature: 'Key signatures',
+			value: 'what scale the music is built on',
+		},
+		{
+			feature: 'Music modes',
+			value: 'derived from major and minor scales for distinct musical mood',
+		},
+	],
 	reference: {
 		title: 'References',
 		list: [

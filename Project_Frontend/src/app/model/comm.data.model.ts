@@ -2,10 +2,15 @@ export interface CommDataModel {
 	header: Header;
 	footer: Footer;
 	home: Home;
+	fieldHint: KeyVal[];
 	apiKeyDialog: DialogText;
 	reference: Reference;
 }
 
+export interface KeyVal {
+	feature: string;
+	value: string;
+}
 export interface Reference {
 	title: string;
 	list: Linked[];

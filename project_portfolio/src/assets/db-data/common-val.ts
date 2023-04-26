@@ -105,8 +105,26 @@ export const COMMVAL: CommDataModel = {
     },
     {
       position: 7,
+      dueDate: '03/29/2023',
+      deliverable: 'Explored WaveGAN',
+      status: 'Completed',
+    },
+    {
+      position: 8,
+      dueDate: '04/19/2023',
+      deliverable: 'Added multiple instruments to Music Editor',
+      status: 'Completed',
+    },
+    {
+      position: 9,
       dueDate: '04/26/2023',
       deliverable: 'Final Presentation',
+      status: 'Upcoming',
+    },
+    {
+      position: 10,
+      dueDate: '05/03/2023',
+      deliverable: 'Final Report',
       status: 'Upcoming',
     },
   ],

@@ -89,6 +89,15 @@
 			</div>
 		</mat-card-content>
 	</mat-card>
+	<mat-card>
+		<mat-card-content>
+			<ul class="hint">
+				<li *ngFor="let fv of commData.getData().fieldHint">
+					<span class="highlight">{{ fv.feature + ': ' }}</span> {{ fv.value }}
+				</li>
+			</ul></mat-card-content
+		>
+	</mat-card>
 	<app-editor
 		[newScore]="currentScore$"
 		[ngStyle]="{ display: narrativeData != '' ? 'block' : 'none' }"

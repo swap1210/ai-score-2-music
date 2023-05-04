@@ -100,7 +100,7 @@ export const COMMVAL: CommDataModel = {
     {
       position: 6,
       dueDate: '03/22/2023',
-      deliverable: 'Mid Presentation',
+      deliverable: 'Demo Presentation',
       status: 'Completed',
     },
     {

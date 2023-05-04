@@ -119,13 +119,13 @@ export const COMMVAL: CommDataModel = {
       position: 9,
       dueDate: '04/26/2023',
       deliverable: 'Final Presentation',
-      status: 'Upcoming',
+      status: 'Completed',
     },
     {
       position: 10,
       dueDate: '05/03/2023',
       deliverable: 'Final Report',
-      status: 'Upcoming',
+      status: 'Completed',
     },
   ],
 };
